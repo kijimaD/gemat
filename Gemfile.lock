@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    gemfile_exporter (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,6 +10,7 @@ GEM
     diff-lcs (1.4.4)
     docile (1.4.0)
     httpclient (2.8.3)
+    rake (12.3.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -30,8 +36,10 @@ PLATFORMS
 
 DEPENDENCIES
   csv
+  gemfile_exporter!
   httpclient
-  rspec
+  rake (~> 12.0)
+  rspec (~> 3.0)
   simplecov
 
 BUNDLED WITH
