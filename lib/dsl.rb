@@ -6,8 +6,9 @@ module GemfileExporter
   class Dsl
     attr_accessor :dependencies, :sources, :git_sources, :groups, :gemspecs
 
-    def initialize
-      gemfile = Bundler.default_gemfile.to_s + '_test'
+    # rubocop:disable Metrics/MethodLength
+    def initialize(gemfile = nil)
+      gemfile ||= Bundler.default_gemfile.to_s
       dsl = Bundler::Dsl.new
       dsl.eval_gemfile(gemfile)
 
@@ -21,5 +22,6 @@ module GemfileExporter
       @groups = dsl.groups
       @gemspecs = dsl.gemspecs
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end

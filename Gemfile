@@ -1,10 +1,10 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in gemfile_exporter.gemspec
-gemspec
+source 'https://rubygems.org'
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
-gem "csv"
-gem "httpclient"
-gem "simplecov"
+gem 'csv'
+gem 'httpclient'
+gem 'rake', '~> 12.0'
+gem 'rspec', '~> 3.0'
+gem 'rubocop'
+gem 'simplecov'
