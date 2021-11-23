@@ -6,8 +6,8 @@ module GemfileExporter
   class Dsl
     attr_accessor :dependencies, :sources, :git_sources, :groups, :gemspecs
 
-    def initialize
-      gemfile = Bundler.default_gemfile.to_s
+    def initialize(gemfile=nil)
+      gemfile ||= Bundler.default_gemfile.to_s
       dsl = Bundler::Dsl.new
       dsl.eval_gemfile(gemfile)
 
