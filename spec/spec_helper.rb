@@ -20,24 +20,24 @@ RSpec.configure do |config|
   end
 
   # Dynamically require everything
-  root_dir = File.dirname(File.dirname(__FILE__))
-  require_pattern = File.join(root_dir, '**/*.rb')
-  @failed = []
+  # root_dir = File.dirname(File.dirname(__FILE__))
+  # require_pattern = File.join(root_dir, '**/*.rb')
+  # @failed = []
 
-  Dir.glob(require_pattern).each do |f|
-    next if f.end_with?('/lib/main.rb')
-    next if f.include?('/spec')
+  # Dir.glob(require_pattern).each do |f|
+  #   next if f.end_with?('/lib/main.rb')
+  #   next if f.include?('/spec')
 
-    begin
-      require_relative f.gsub("#{root_dir}/", '../')
-    rescue NameError
-      # May fail if parent class not required yet
-      @failed << f
-    end
-  end
+  #   begin
+  #     require_relative f.gsub("#{root_dir}/", '../')
+  #   rescue NameError
+  #     # May fail if parent class not required yet
+  #     @failed << f
+  #   end
+  # end
 
-  # Retry unresolved requires
-  @failed.each do |f|
-    require_relative f.gsub("#{root_dir}/", '../')
-  end
+  # # Retry unresolved requires
+  # @failed.each do |f|
+  #   require_relative f.gsub("#{root_dir}/", '../')
+  # end
 end

@@ -1,3 +1,5 @@
+require_relative '../lib/dsl'
+
 RSpec.describe GemfileExporter::Dsl do
   describe '#initialize' do
     context 'when valid gemfile' do
