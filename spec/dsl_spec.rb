@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/dsl'
 
 RSpec.describe GemfileExporter::Dsl do
@@ -5,9 +7,9 @@ RSpec.describe GemfileExporter::Dsl do
     context 'when valid gemfile' do
       let(:dsl) { described_class.new('spec/fixtures/Gemfile_test') }
 
-      it "has a dependencies" do
+      it 'has a dependencies' do
         expect(dsl.dependencies.map(&:name).take(5))
-          .to eq ['rails', 'puma', 'sass-rails', 'webpacker', 'turbolinks']
+          .to eq %w[rails puma sass-rails webpacker turbolinks]
       end
 
       it 'has a other attribute' do
