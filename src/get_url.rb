@@ -2,6 +2,8 @@
 
 module GemfileExporter
   class GetUrl
+    attr_accessor :urls
+
     def initialize(dsl)
       @dsl = dsl
       @urls = {}
@@ -9,7 +11,8 @@ module GemfileExporter
 
     def run
       @dsl.dependencies.each do |gem|
-        return unless gem == @dsl.dependencies.first
+        # break unless gem == @dsl.dependencies.first
+
         sleep 0.1
         p "start #{gem.name}..."
 
@@ -29,8 +32,6 @@ module GemfileExporter
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
       end
-
-      p @urls
     end
 
     def github_url(url)
