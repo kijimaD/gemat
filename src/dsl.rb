@@ -4,7 +4,7 @@ require 'bundler'
 
 module GemfileExporter
   class Dsl
-    attr_accessor :dependencies, :sources, :git_sources, :groups
+    attr_accessor :dependencies, :sources, :git_sources, :groups, :gemspecs
 
     def initialize
       gemfile = Bundler.default_gemfile.to_s + '_test'
@@ -12,13 +12,14 @@ module GemfileExporter
       dsl.eval_gemfile(gemfile)
 
       class << dsl
-        attr_accessor :sources, :git_sources, :groups
+        attr_accessor :sources, :git_sources, :groups, :gemspecs
       end
 
       @dependencies = dsl.dependencies
       @sources = dsl.sources
       @git_sources = dsl.git_sources
       @groups = dsl.groups
+      @gemspecs = dsl.gemspecs
     end
   end
 end
