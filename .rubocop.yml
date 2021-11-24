@@ -1,5 +1,6 @@
 Style/Documentation:
   Enabled: false
+
 AllCops:
   Exclude:
     - 'exe/gemfile_exporter'
