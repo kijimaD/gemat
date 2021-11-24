@@ -13,7 +13,7 @@ RSpec.describe GemfileExporter::CsvFormatter do
       end
       csv_formatter = described_class.new(url)
       csv_formatter.to_csv
-      expect(open('test.csv', 'r') { |f| f.read }).to eq "example.com,\n"
+      expect(open('test.csv', 'r', &:read)).to eq "example.com,\n"
     end
   end
 end
