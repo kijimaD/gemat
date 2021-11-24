@@ -5,13 +5,13 @@ require 'json'
 
 require_relative 'dsl'
 require_relative 'get_url'
-require_relative 'formatter'
+require_relative 'csv_formatter'
 
 def main
   dsl = GemfileExporter::Dsl.new
   url = GemfileExporter::GetUrl.new(dsl)
   url.run
-  GemfileExporter::Formatter.new(url).to_csv
+  GemfileExporter::CsvFormatter.new(url).to_csv
 end
 
 main
