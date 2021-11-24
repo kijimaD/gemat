@@ -1,6 +1,4 @@
-AllCops:
-  Exclude:
-    - 'exe/gemfile_exporter'
-
 Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
   Enabled: false
