@@ -6,6 +6,7 @@ require 'json'
 require_relative 'csv_formatter'
 require_relative 'dsl'
 require_relative 'gemfile_exporter/version'
+require_relative 'gemfile_exporter/cli'
 require_relative 'get_url'
 
 module GemfileExporter
