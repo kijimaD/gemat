@@ -15,7 +15,7 @@ module Gemat
         # break unless gem == @dsl.dependencies.first
 
         sleep 0.1
-        p "start #{gem.name}..."
+        print "start #{gem.name}..."
 
         client = HTTPClient.new
         request = client.get(rubygems_api(gem))
@@ -36,6 +36,7 @@ module Gemat
         repo = github_gem[2]
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
+        print "done\n"
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
