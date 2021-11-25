@@ -3,7 +3,7 @@
 require 'csv'
 
 module GemfileExporter
-  class Formatter
+  class CsvFormatter
     def initialize(url)
       @url = url
     end
