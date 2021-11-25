@@ -2,7 +2,7 @@
 
 require 'bundler'
 
-module GemfileExporter
+module Gemat
   class Dsl
     attr_accessor :dependencies, :sources, :git_sources, :groups, :gemspecs
 

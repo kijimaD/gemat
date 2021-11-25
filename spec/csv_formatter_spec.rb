@@ -2,7 +2,7 @@
 
 require_relative '../lib/csv_formatter'
 
-RSpec.describe GemfileExporter::CsvFormatter do
+RSpec.describe Gemat::CsvFormatter do
   after { File.delete('test.csv') }
 
   describe '#to_csv' do

@@ -2,7 +2,7 @@
 
 require 'csv'
 
-module GemfileExporter
+module Gemat
   class CsvFormatter
     def initialize(url)
       @url = url

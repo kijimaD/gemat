@@ -2,7 +2,7 @@
 
 require_relative '../lib/dsl'
 
-RSpec.describe GemfileExporter::Dsl do
+RSpec.describe Gemat::Dsl do
   describe '#initialize' do
     context 'when valid gemfile' do
       let(:dsl) { described_class.new('spec/fixtures/Gemfile_test') }
