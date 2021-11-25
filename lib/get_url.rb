@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module GemfileExporter
+module Gemat
   class GetUrl
     attr_accessor :urls
 

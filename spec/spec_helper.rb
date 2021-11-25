@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'gemfile_exporter'
+require 'gemat'
 
 if ENV['COVERAGE']
   require 'simplecov'

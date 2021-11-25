@@ -1,13 +1,13 @@
 WIP
 
-# GemfileExporter
+# Gemat
 
 Export Gemfile several formats. CSV, Markdown etc.
 
 ## Installation
 
 ```ruby
-gem 'gemfile_exporter'
+gem 'gemat'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install gemfile_exporter
+    $ gem install gemat
 
 ## Usage
 
@@ -30,8 +30,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kijimaD/gemfile_exporter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/kijimaD/gemfile_exporter/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/kijimaD/gemat. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/kijimaD/gemat/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the GemfileExporter project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/kijimaD/gemfile_exporter/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Gemat project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/kijimaD/gemat/blob/master/CODE_OF_CONDUCT.md).
