@@ -1,4 +1,4 @@
-WIP
+[![Gem Version](https://badge.fury.io/rb/gemat.svg)](https://badge.fury.io/rb/gemat)
 
 # Gemat
 
@@ -7,7 +7,7 @@ Export Gemfile several formats. CSV, Markdown etc.
 ## Installation
 
 ```ruby
-gem 'gemat'
+gem gemat
 ```
 
 And then execute:
@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```shell
+$ gemat csv # export to CSV
+```
 
 ## Development
 
