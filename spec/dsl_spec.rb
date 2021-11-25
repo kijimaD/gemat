@@ -9,7 +9,7 @@ RSpec.describe Gemat::Dsl do
 
       it 'has a dependencies' do
         expect(dsl.dependencies.map(&:name).take(5))
-          .to eq %w[rails puma sass-rails webpacker turbolinks]
+          .to eq %w[rails ranked-model pg byebug web-console]
       end
 
       it 'has a other attribute' do

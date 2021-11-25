@@ -2,8 +2,6 @@
 
 module Gemat
   class GetUrl
-    attr_accessor :urls
-
     def initialize(dsl)
       @dsl = dsl
       @urls = {}
@@ -15,11 +13,16 @@ module Gemat
         # break unless gem == @dsl.dependencies.first
 
         sleep 0.1
-        p "start #{gem.name}..."
+        print "#{gem.name}..."
 
         client = HTTPClient.new
-        request =  client.get(rubygems_api(gem))
-        response = JSON.parse(request.body)
+        request = client.get(rubygems_api(gem))
+        begin
+          response = JSON.parse(request.body)
+        rescue JSON::ParserError
+          print "not found\n"
+          next
+        end
         # puts JSON.pretty_generate(response)
 
         github_gem = github_url(response.dig('metadata', 'homepage_uri')) ||
@@ -32,6 +35,7 @@ module Gemat
         repo = github_gem[2]
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
+        print "done\n"
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
@@ -43,6 +47,10 @@ module Gemat
 
     def rubygems_api(gem)
       "https://rubygems.org/api/v1/gems/#{gem.name}.json"
+    end
+
+    def urls
+      @urls.sort.to_h
     end
   end
 end
