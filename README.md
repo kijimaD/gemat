@@ -2,7 +2,8 @@
 
 # Gemat
 
-Export Gemfile several formats. CSV, Markdown etc.
+Gemat is a gem for exporing Gemfile to several formats. ex. CSV, Markdown etc.
+![143468085-7cb3a089-1821-4dc1-b725-361001f72dc3](https://user-images.githubusercontent.com/11595790/143468450-d5d4451d-9103-4018-bfcf-3dc75b652cd1.png)
 
 ## Installation
 
@@ -22,6 +23,7 @@ Or install it yourself as:
 
 ```shell
 $ gemat csv # export to CSV
+$ gemat md # export to markdown table
 ```
 
 ## Development
