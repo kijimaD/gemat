@@ -12,7 +12,7 @@ RSpec.describe Gemat::GetUrl do
 
       dsl = Gemat::GetUrl.new(dsl_mock)
       dsl.run
-      expect(dsl.urls).to eq({'rails' => 'https://github.com/rails/rails'})
+      expect(dsl.urls).to eq({ 'rails' => 'https://github.com/rails/rails' })
     end
   end
 end
