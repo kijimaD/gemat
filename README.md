@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/gemat.svg)](https://badge.fury.io/rb/gemat)
+[![Check](https://github.com/kijimaD/gemat/actions/workflows/ruby.yml/badge.svg)](https://github.com/kijimaD/gemat/actions/workflows/ruby.yml)
 
 # Gemat
 
