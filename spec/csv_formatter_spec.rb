@@ -9,11 +9,11 @@ RSpec.describe Gemat::CsvFormatter do
     it 'can run' do
       url = Object.new
       def url.urls
-        ['example.com']
+        { 'gem': 'example.com' }
       end
       csv_formatter = described_class.new(url)
       csv_formatter.to_csv
-      expect(open('test.csv', 'r', &:read)).to eq "example.com,\n"
+      expect(open('test.csv', 'r', &:read)).to eq "gem,GitHub\ngem,example.com\n"
     end
   end
 end
