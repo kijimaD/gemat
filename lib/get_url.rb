@@ -18,8 +18,12 @@ module Gemat
         p "start #{gem.name}..."
 
         client = HTTPClient.new
-        request =  client.get(rubygems_api(gem))
-        response = JSON.parse(request.body)
+        request = client.get(rubygems_api(gem))
+        begin
+          response = JSON.parse(request.body)
+        rescue JSON::ParserError
+          next
+        end
         # puts JSON.pretty_generate(response)
 
         github_gem = github_url(response.dig('metadata', 'homepage_uri')) ||
