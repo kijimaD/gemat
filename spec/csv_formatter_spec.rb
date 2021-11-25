@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../lib/csv_formatter'
-
 RSpec.describe Gemat::CsvFormatter do
   after { File.delete('test.csv') }
 
