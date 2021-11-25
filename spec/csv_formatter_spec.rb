@@ -13,7 +13,7 @@ RSpec.describe Gemat::CsvFormatter do
       end
       csv_formatter = described_class.new(url)
       csv_formatter.to_csv
-      expect(open('test.csv', 'r', &:read)).to eq "gem,GitHub\ngem,example.com\n"
+      expect(open('test.csv', 'r', &:read)).to eq "gem,Repository_URL\ngem,example.com\n"
     end
   end
 end
