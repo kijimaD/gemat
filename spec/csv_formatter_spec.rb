@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Gemat::CsvFormatter do
-  after { File.delete('test.csv') }
+  after { File.delete("#{Gemat::CsvFormatter::DEFAULT_OUTPUT}.csv") }
 
   describe '#to_csv' do
     it 'can run' do
@@ -11,7 +11,8 @@ RSpec.describe Gemat::CsvFormatter do
       end
       csv_formatter = described_class.new(url)
       csv_formatter.to_csv
-      expect(open('test.csv', 'r', &:read)).to eq "gem,Repository_URL\ngem,example.com\n"
+      expect(File.open("#{Gemat::CsvFormatter::DEFAULT_OUTPUT}.csv", 'r', &:read))
+        .to eq "gem,Repo URL\ngem,example.com\n"
     end
   end
 end
