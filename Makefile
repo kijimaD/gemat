@@ -7,4 +7,6 @@ open:
 lint:
 	bundle exec rubocop
 build:
-	rake build
+	rake install
+publish:
+	rake release
