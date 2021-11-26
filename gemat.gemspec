@@ -25,5 +25,7 @@ Gem::Specification.new do |spec|
   spec.executables   = 'gemat'
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'httpclient'
+  spec.add_dependency 'ruby-progressbar'
   spec.add_dependency 'thor'
 end

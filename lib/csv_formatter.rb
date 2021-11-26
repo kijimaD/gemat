@@ -12,7 +12,7 @@ module Gemat
     end
 
     def to_csv
-      if @output then
+      if @output
         CSV.open(@output, 'w') do |csv|
           @rows.each { |row| csv << row }
         end
