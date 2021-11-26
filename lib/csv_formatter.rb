@@ -4,25 +4,31 @@ require 'csv'
 
 module Gemat
   class CsvFormatter
-    DEFAULT_OUTPUT = 'gemat'
-
-    def initialize(url, output = DEFAULT_OUTPUT)
+    def initialize(url, output = nil)
       @url = url
       @output = output
+      @rows = []
+      gen_array
     end
 
     def to_csv
-      CSV.open(output_file, 'w') do |csv|
-        csv << ['gem', 'Repo URL']
-        @url.urls.each do |k, v|
-          csv << [k, v]
+      if @output then
+        CSV.open(@output, 'w') do |csv|
+          @rows.each { |row| csv << row }
         end
+      else
+        print "\n\n"
+        @rows.each { |row| print row.to_csv }
       end
-      print "\n\nexport to #{output_file}"
     end
 
-    def output_file
-      "#{@output}.csv"
+    private
+
+    def gen_array
+      @rows << ['gem', 'Repo URL']
+      @url.urls.each do |k, v|
+        @rows << [k, v]
+      end
     end
   end
 end
