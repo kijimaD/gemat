@@ -18,7 +18,7 @@ module Gemat
           csv << [k, v]
         end
       end
-      print "\n\nexport to #{output_file} !"
+      print "\n\nexport to #{output_file}"
     end
 
     def output_file

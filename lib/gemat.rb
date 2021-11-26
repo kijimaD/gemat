@@ -2,6 +2,7 @@
 
 require 'httpclient'
 require 'json'
+require 'ruby-progressbar'
 
 require_relative 'csv_formatter'
 require_relative 'md_formatter'

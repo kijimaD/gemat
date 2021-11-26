@@ -9,11 +9,9 @@ module Gemat
 
     # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
     def run
+      pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
-        # break unless gem == @dsl.dependencies.first
-
         sleep 0.1
-        print "#{gem.name}..."
 
         client = HTTPClient.new
         request = client.get(rubygems_api(gem))
@@ -35,7 +33,8 @@ module Gemat
         repo = github_gem[2]
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
-        print "done\n"
+
+        pb.increment
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
