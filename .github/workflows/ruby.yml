@@ -16,8 +16,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: bundle
-      run: bundle install
     - name: Run rspec
       run: make cov
       env:
@@ -29,8 +27,6 @@ jobs:
         path: coverage
     - name: Build
       run: make build
-    - name: test
-      run: ls -al
     - name: Test run
       run: gemat csv
     - name: Test run
