@@ -23,14 +23,14 @@ module Gemat
         end
         # puts JSON.pretty_generate(response)
 
-        github_gem = github_url(response.dig('metadata', 'homepage_uri')) ||
-                     github_url(response['homepage_uri']) ||
-                     github_url(response['bug_tracker_uri']) ||
-                     github_url(response['source_code_uri'])
-        next if github_gem.nil?
+        match = github_url_match(response.dig('metadata', 'homepage_uri')) ||
+                github_url_match(response['homepage_uri']) ||
+                github_url_match(response['bug_tracker_uri']) ||
+                github_url_match(response['source_code_uri'])
+        next if match.nil?
 
-        user = github_gem[1]
-        repo = github_gem[2]
+        user = match[1]
+        repo = match[2]
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
 
@@ -39,7 +39,7 @@ module Gemat
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
-    def github_url(url)
+    def github_url_match(url)
       reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
       reg.match(url)
     end
