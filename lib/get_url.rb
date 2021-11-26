@@ -9,11 +9,9 @@ module Gemat
 
     # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
     def run
+      pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
-        # break unless gem == @dsl.dependencies.first
-
         sleep 0.1
-        print "#{gem.name}..."
 
         client = HTTPClient.new
         request = client.get(rubygems_api(gem))
@@ -25,22 +23,23 @@ module Gemat
         end
         # puts JSON.pretty_generate(response)
 
-        github_gem = github_url(response.dig('metadata', 'homepage_uri')) ||
-                     github_url(response['homepage_uri']) ||
-                     github_url(response['bug_tracker_uri']) ||
-                     github_url(response['source_code_uri'])
-        next if github_gem.nil?
+        match = github_url_match(response.dig('metadata', 'homepage_uri')) ||
+                github_url_match(response['homepage_uri']) ||
+                github_url_match(response['bug_tracker_uri']) ||
+                github_url_match(response['source_code_uri'])
+        next if match.nil?
 
-        user = github_gem[1]
-        repo = github_gem[2]
+        user = match[1]
+        repo = match[2]
         gh_url = "https://github.com/#{user}/#{repo}"
         @urls[gem.name] = gh_url
-        print "done\n"
+
+        pb.increment
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
-    def github_url(url)
+    def github_url_match(url)
       reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
       reg.match(url)
     end

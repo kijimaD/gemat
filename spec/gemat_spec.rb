@@ -7,19 +7,13 @@ RSpec.describe Gemat do
 
   describe 'csv' do
     it 'can run' do
-      dsl = Gemat::Dsl.new('spec/fixtures/Gemfile_test')
-      url = Gemat::GetUrl.new(dsl)
-      url.run
-      Gemat::CsvFormatter.new(url).to_csv
+      Gemat::Cli.new.csv
     end
   end
 
   describe 'md' do
     it 'can run' do
-      dsl = Gemat::Dsl.new('spec/fixtures/Gemfile_test')
-      url = Gemat::GetUrl.new(dsl)
-      url.run
-      Gemat::MdFormatter.new(url).to_md
+      Gemat::Cli.new.md
     end
   end
 end

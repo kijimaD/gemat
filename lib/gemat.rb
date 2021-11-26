@@ -2,6 +2,7 @@
 
 require 'httpclient'
 require 'json'
+require 'ruby-progressbar'
 
 require_relative 'csv_formatter'
 require_relative 'md_formatter'
@@ -12,4 +13,13 @@ require_relative 'get_url'
 
 module Gemat
   class Error < StandardError; end
+
+  class Gemat
+    def self.run(&block)
+      dsl = Dsl.new
+      url = GetUrl.new(dsl)
+      url.run
+      block.call(url)
+    end
+  end
 end
