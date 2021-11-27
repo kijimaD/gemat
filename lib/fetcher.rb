@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Gemat
-  class GetUrl
+  class Fetcher
     def initialize(dsl)
       @dsl = dsl
       @urls = {}
