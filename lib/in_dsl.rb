@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bundler'
-
 module Gemat
   class InDsl
     attr_accessor :dependencies, :sources, :git_sources, :groups, :gemfiles

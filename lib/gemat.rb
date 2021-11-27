@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
+require 'bundler'
+require 'csv'
 require 'httpclient'
 require 'json'
 require 'ruby-progressbar'
+require 'thor'
 
 require_relative 'in_dsl'
 require_relative 'fetcher'

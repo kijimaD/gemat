@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'logger'
-
 module Gemat
   class MdFormatter
     def initialize(gems, output = nil)

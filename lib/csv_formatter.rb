@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'csv'
-
 module Gemat
   class CsvFormatter
     def initialize(gems, output = nil)

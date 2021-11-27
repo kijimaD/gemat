@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'thor'
-
 module Gemat
   class Cli < Thor
     desc 'csv', 'export Gemfile to CSV file'
