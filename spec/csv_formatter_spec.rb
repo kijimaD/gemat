@@ -2,7 +2,7 @@
 
 RSpec.describe Gemat::CsvFormatter do
   describe '#to_csv' do
-    context 'specify output file' do
+    context 'when specify output file' do
       it 'can write to file' do
         gem_mock = instance_double('gem')
         allow(gem_mock).to receive(:name).and_return('gem')
