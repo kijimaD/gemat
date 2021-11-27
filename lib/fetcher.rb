@@ -9,7 +9,6 @@ module Gemat
       @gems = []
     end
 
-    # rubocop:disable Metrics/MethodLength
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
@@ -22,7 +21,6 @@ module Gemat
         @gems << Gem.new(response)
       end
     end
-    # rubocop:enable Metrics/MethodLength
 
     private
 
