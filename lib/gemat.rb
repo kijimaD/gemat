@@ -16,7 +16,7 @@ module Gemat
   class Error < StandardError; end
 
   class Gemat
-    def self.run(&block)
+    def self.run(options = {}, &block)
       dsl = InDsl.new
       fetcher = Fetcher.new(dsl)
       fetcher.run
