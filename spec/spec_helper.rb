@@ -2,6 +2,8 @@
 
 require 'bundler/setup'
 require 'gemat'
+require 'webmock'
+require 'vcr'
 
 if ENV['COVERAGE']
   require 'simplecov'
@@ -21,6 +23,11 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/vcr'
+    c.hook_into :webmock
+    c.allow_http_connections_when_no_cassette = false
+  end
   # Dynamically require everything
   # root_dir = File.dirname(File.dirname(__FILE__))
   # require_pattern = File.join(root_dir, '**/*.rb')
