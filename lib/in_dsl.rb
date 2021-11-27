@@ -3,7 +3,7 @@
 require 'bundler'
 
 module Gemat
-  class Dsl
+  class InDsl
     attr_accessor :dependencies, :sources, :git_sources, :groups
 
     # rubocop:disable Metrics/MethodLength
