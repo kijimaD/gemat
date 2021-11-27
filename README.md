@@ -3,8 +3,8 @@
 
 # Gemat
 
-Gemat is a gem for exporing Gemfile to several formats. ex. CSV, Markdown etc.
-![143468085-7cb3a089-1821-4dc1-b725-361001f72dc3](https://user-images.githubusercontent.com/11595790/143468450-d5d4451d-9103-4018-bfcf-3dc75b652cd1.png)
+Gemat is a Ruby gem for exporing Gemfile to several formats! e.g. CSV, Markdown etc.
+![Screenshot_2021-11-27_14-13-58](https://user-images.githubusercontent.com/11595790/143669007-582ad8d2-03c3-46d3-a113-e63945f38406.png)
 
 ## Installation
 
