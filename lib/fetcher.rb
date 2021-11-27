@@ -2,19 +2,21 @@
 
 module Gemat
   class Fetcher
+    attr_accessor :gems
+
     def initialize(dsl)
       @dsl = dsl
-      @urls = {}
+      @gems = []
     end
 
-    # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:disable Metrics/MethodLength
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
         sleep 0.1
 
         client = HTTPClient.new
-        request = client.get(rubygems_api(gem))
+        request = client.get(rubygems_api(gem.name))
         begin
           response = JSON.parse(request.body)
         rescue JSON::ParserError
@@ -23,33 +25,17 @@ module Gemat
         end
         # puts JSON.pretty_generate(response)
 
-        match = github_url_match(response.dig('metadata', 'homepage_uri')) ||
-                github_url_match(response['homepage_uri']) ||
-                github_url_match(response['bug_tracker_uri']) ||
-                github_url_match(response['source_code_uri'])
-        next if match.nil?
-
-        user = match[1]
-        repo = match[2]
-        gh_url = "https://github.com/#{user}/#{repo}"
-        @urls[gem.name] = gh_url
+        @gems << Gem.new(response)
 
         pb.increment
       end
     end
-    # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:enable Metrics/MethodLength
 
-    def github_url_match(url)
-      reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
-      reg.match(url)
-    end
+    private
 
-    def rubygems_api(gem)
-      "https://rubygems.org/api/v1/gems/#{gem.name}.json"
-    end
-
-    def urls
-      @urls.sort.to_h
+    def rubygems_api(name)
+      "https://rubygems.org/api/v1/gems/#{name}.json"
     end
   end
 end

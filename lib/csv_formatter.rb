@@ -4,8 +4,8 @@ require 'csv'
 
 module Gemat
   class CsvFormatter
-    def initialize(url, output = nil)
-      @url = url
+    def initialize(gems, output = nil)
+      @gems = gems
       @output = output
       @rows = []
       gen_rows
@@ -26,8 +26,8 @@ module Gemat
 
     def gen_rows
       @rows << ['gem', 'Repo URL']
-      @url.urls.each do |k, v|
-        @rows << [k, v]
+      @gems.each do |gem|
+        @rows << [gem.name, gem.repo_url]
       end
     end
   end

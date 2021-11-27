@@ -6,6 +6,7 @@ require 'ruby-progressbar'
 
 require_relative 'in_dsl'
 require_relative 'fetcher'
+require_relative 'gem'
 require_relative 'csv_formatter'
 require_relative 'md_formatter'
 require_relative 'gemat/version'
@@ -17,9 +18,9 @@ module Gemat
   class Gemat
     def self.run(&block)
       dsl = InDsl.new
-      url = Fetcher.new(dsl)
-      url.run
-      block.call(url)
+      fetcher = Fetcher.new(dsl)
+      fetcher.run
+      block.call(fetcher.gems)
     end
   end
 end

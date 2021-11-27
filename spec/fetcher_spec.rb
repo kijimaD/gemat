@@ -2,7 +2,7 @@
 
 RSpec.describe Gemat::Fetcher do
   describe '#run' do
-    it 'set @urls' do
+    it 'set @gems' do
       dsl_mock = instance_double('dsl')
       dependencies_mock = instance_double('dependencies')
       allow(dsl_mock).to receive(:dependencies).and_return([dependencies_mock])
@@ -10,7 +10,8 @@ RSpec.describe Gemat::Fetcher do
 
       dsl = described_class.new(dsl_mock)
       dsl.run
-      expect(dsl.urls).to eq({ 'rails' => 'https://github.com/rails/rails' })
+      expect(dsl.gems.first).to have_attributes('name': 'rails',
+                                                'repo_url': 'https://github.com/rails/rails')
     end
   end
 end
