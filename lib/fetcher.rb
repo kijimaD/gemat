@@ -9,7 +9,7 @@ module Gemat
       @gems = []
     end
 
-    # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:disable Metrics/MethodLength
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
@@ -30,7 +30,7 @@ module Gemat
         pb.increment
       end
     end
-    # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:enable Metrics/MethodLength
 
     def rubygems_api(gem)
       "https://rubygems.org/api/v1/gems/#{gem.name}.json"
