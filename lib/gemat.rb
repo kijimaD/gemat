@@ -6,6 +6,7 @@ require 'ruby-progressbar'
 
 require_relative 'in_dsl'
 require_relative 'fetcher'
+require_relative 'gem'
 require_relative 'csv_formatter'
 require_relative 'md_formatter'
 require_relative 'gemat/version'

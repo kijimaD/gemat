@@ -2,9 +2,11 @@
 
 module Gemat
   class Fetcher
+    attr_accessor :gems
+
     def initialize(dsl)
       @dsl = dsl
-      @urls = {}
+      @gems = []
     end
 
     # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
@@ -23,33 +25,15 @@ module Gemat
         end
         # puts JSON.pretty_generate(response)
 
-        match = github_url_match(response.dig('metadata', 'homepage_uri')) ||
-                github_url_match(response['homepage_uri']) ||
-                github_url_match(response['bug_tracker_uri']) ||
-                github_url_match(response['source_code_uri'])
-        next if match.nil?
-
-        user = match[1]
-        repo = match[2]
-        gh_url = "https://github.com/#{user}/#{repo}"
-        @urls[gem.name] = gh_url
+        @gems << Gem.new(response)
 
         pb.increment
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
-    def github_url_match(url)
-      reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
-      reg.match(url)
-    end
-
     def rubygems_api(gem)
       "https://rubygems.org/api/v1/gems/#{gem.name}.json"
-    end
-
-    def urls
-      @urls.sort.to_h
     end
   end
 end
