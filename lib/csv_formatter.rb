@@ -8,7 +8,7 @@ module Gemat
       @url = url
       @output = output
       @rows = []
-      gen_array
+      gen_rows
     end
 
     def to_csv
@@ -24,7 +24,7 @@ module Gemat
 
     private
 
-    def gen_array
+    def gen_rows
       @rows << ['gem', 'Repo URL']
       @url.urls.each do |k, v|
         @rows << [k, v]
