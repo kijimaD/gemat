@@ -11,10 +11,10 @@ module Gemat
     end
 
     def repo_url
-      match = github_url_match(@response.dig('metadata', 'homepage_uri')) ||
-              github_url_match(@response['homepage_uri']) ||
-              github_url_match(@response['bug_tracker_uri']) ||
-              github_url_match(@response['source_code_uri'])
+      match = github_url_match([@response.dig('metadata', 'homepage_uri'),
+                                @response['homepage_uri'],
+                                @response['bug_tracker_uri'],
+                                @response['source_code_uri']])
       return if match.nil?
 
       user = match[1]
@@ -24,9 +24,11 @@ module Gemat
 
     private
 
-    def github_url_match(url)
+    def github_url_match(urls)
       reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
-      reg.match(url)
+      urls.each do |url|
+        return reg.match(url) if reg.match(url)
+      end
     end
   end
 end
