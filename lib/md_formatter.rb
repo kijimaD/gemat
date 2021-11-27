@@ -4,16 +4,36 @@ require 'logger'
 
 module Gemat
   class MdFormatter
-    def initialize(gems)
+    def initialize(gems, output = nil)
       @gems = gems
+      @output = output
+      @rows = []
+      gen_rows
     end
 
     def to_md
-      print "\n\n"
-      puts '| gem | Repo URL |'
-      puts '| ---- | ---- |'
+      if @output
+        File.open(@output, 'w') { |file| each_write(@rows) { |string| file.<< string } }
+      else
+        print "\n\n"
+        each_write(@rows) { |string| print string }
+      end
+    end
+
+    private
+
+    def gen_rows
+      @rows << '| gem | Repo URL |'
+      @rows << '| ---- | ---- |'
       @gems.each do |gem|
-        puts "| #{gem.name} | #{gem.repo_url} |"
+        @rows << "| #{gem.name} | #{gem.repo_url} |"
+      end
+    end
+
+    def each_write(rows, &proc)
+      rows.each do |row|
+        proc.call(row)
+        proc.call("\n")
       end
     end
   end

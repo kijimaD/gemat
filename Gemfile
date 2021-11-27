@@ -4,9 +4,14 @@ source 'https://rubygems.org'
 
 gem 'csv'
 gem 'httpclient'
-gem 'rake', '~> 12.0'
-gem 'rspec', '~> 3.0'
-gem 'rubocop'
+gem 'rake'
 gem 'ruby-progressbar'
-gem 'simplecov'
 gem 'thor'
+
+group :test do
+  gem 'rspec'
+  gem 'rubocop'
+  gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
+end

@@ -2,6 +2,8 @@
 
 require 'bundler/setup'
 require 'gemat'
+require 'webmock'
+require 'vcr'
 
 if ENV['COVERAGE']
   require 'simplecov'
@@ -20,6 +22,26 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/vcr'
+    c.hook_into :webmock
+    c.allow_http_connections_when_no_cassette = false
+  end
+
+  # rubocop:disable Security/Eval, Style/EvalWithLocation
+  def capture(stream)
+    begin
+      stream = stream.to_s
+      eval "$#{stream} = StringIO.new"
+      yield
+      result = eval("$#{stream}").string
+    ensure
+      eval("$#{stream} = #{stream.upcase}")
+    end
+    result
+  end
+  # rubocop:enable Security/Eval, Style/EvalWithLocation
 
   # Dynamically require everything
   # root_dir = File.dirname(File.dirname(__FILE__))

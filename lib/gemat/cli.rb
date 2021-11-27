@@ -5,13 +5,15 @@ require 'thor'
 module Gemat
   class Cli < Thor
     desc 'csv', 'export Gemfile to CSV file'
+    method_options input: :string, output: :string
     def csv
-      Gemat.run { |gems| CsvFormatter.new(gems).to_csv }
+      Gemat.run(options) { |gems| CsvFormatter.new(gems, options[:output]).to_csv }
     end
 
     desc 'md', 'export Gemfile to markdown'
+    method_options input: :string, output: :string
     def md
-      Gemat.run { |gems| MdFormatter.new(gems).to_md }
+      Gemat.run(options) { |gems| MdFormatter.new(gems, options[:output]).to_md }
     end
   end
 end

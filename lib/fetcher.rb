@@ -9,30 +9,33 @@ module Gemat
       @gems = []
     end
 
-    # rubocop:disable Metrics/MethodLength
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each do |gem|
         sleep 0.1
+        pb.increment
 
-        client = HTTPClient.new
-        request = client.get(rubygems_api(gem.name))
-        begin
-          response = JSON.parse(request.body)
-        rescue JSON::ParserError
-          print "not found\n"
-          next
-        end
-        # puts JSON.pretty_generate(response)
+        response = fetch(gem)
+        next unless response
 
         @gems << Gem.new(response)
-
-        pb.increment
       end
     end
-    # rubocop:enable Metrics/MethodLength
 
     private
+
+    def fetch(gem)
+      client = HTTPClient.new
+      request = client.get(rubygems_api(gem.name))
+      begin
+        response = JSON.parse(request.body)
+      rescue JSON::ParserError
+        print "\n#{gem.name} is not found on Rubygems..."
+        return
+      end
+      # puts JSON.pretty_generate(response)
+      response
+    end
 
     def rubygems_api(name)
       "https://rubygems.org/api/v1/gems/#{name}.json"
