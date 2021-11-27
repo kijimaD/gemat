@@ -1,0 +1,829 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/csv.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:03 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1fd43273-dba0-42b0-8162-bf097c03620e
+      X-Runtime:
+      - '0.015075'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.88.209.40:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:03 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11963-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001384.544801,VS0,VE142
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"c94d03fe91ac9e0ff6d483541148fbf6"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"csv","downloads":5530282,"version":"3.2.1","version_created_at":"2021-10-22T21:11:56.697Z","version_downloads":129102,"platform":"ruby","authors":"James
+        Edward Gray II, Kouhei Sutou","info":"The CSV library provides a complete
+        interface to CSV files and data. It offers tools to enable you to read and
+        write to and from Strings or IO objects, as needed.","licenses":["Ruby","BSD-2-Clause"],"metadata":{},"yanked":false,"sha":"7d5c1c2ca73338f3deba4c1730308300795c783b0da9880dc002a362356c376f","project_uri":"https://rubygems.org/gems/csv","gem_uri":"https://rubygems.org/gems/csv-3.2.1.gem","homepage_uri":"https://github.com/ruby/csv","wiki_uri":null,"documentation_uri":"https://www.rubydoc.info/gems/csv/3.2.1","mailing_list_uri":null,"source_code_uri":null,"bug_tracker_uri":null,"changelog_uri":null,"funding_uri":null,"dependencies":{"development":[{"name":"benchmark_driver","requirements":"\u003e=
+        0"},{"name":"bundler","requirements":"\u003e= 0"},{"name":"rake","requirements":"\u003e=
+        0"},{"name":"test-unit","requirements":"\u003e= 3.4.8"}],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:03 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/httpclient.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:03 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3b91cb7a-9cea-4513-b9d5-5466d3e51659
+      X-Runtime:
+      - '0.014826'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 54.70.75.100:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:03 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11982-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001384.832207,VS0,VE132
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"57c406a04d8dac37bd3e6165da91ba02"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"httpclient","downloads":174952605,"version":"2.8.3","version_created_at":"2016-12-09T05:58:57.436Z","version_downloads":140934880,"platform":"ruby","authors":"Hiroshi
+        Nakamura","info":"gives something like the functionality of libwww-perl (LWP)
+        in Ruby","licenses":["ruby"],"metadata":{},"yanked":false,"sha":"2951e4991214464c3e92107e46438527d23048e634f3aee91c719e0bdfaebda6","project_uri":"https://rubygems.org/gems/httpclient","gem_uri":"https://rubygems.org/gems/httpclient-2.8.3.gem","homepage_uri":"https://github.com/nahi/httpclient","wiki_uri":null,"documentation_uri":"https://www.rubydoc.info/gems/httpclient/2.8.3","mailing_list_uri":null,"source_code_uri":null,"bug_tracker_uri":null,"changelog_uri":null,"funding_uri":null,"dependencies":{"development":[],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:03 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rake.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 290d9ace-6c37-40af-a9aa-ced2ae269440
+      X-Runtime:
+      - '0.012550'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 44.239.42.136:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11930-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001384.101358,VS0,VE149
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"b1fb05274ff86a0dd53f9fa6f8cb3aaf"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"rake","downloads":526497850,"version":"13.0.6","version_created_at":"2021-07-09T02:52:07.753Z","version_downloads":21815737,"platform":"ruby","authors":"Hiroshi
+        SHIBATA, Eric Hodel, Jim Weirich","info":"Rake is a Make-like program implemented
+        in Ruby. Tasks and dependencies are\nspecified in standard Ruby syntax.\nRake
+        has the following features:\n  * Rakefiles (rake''s version of Makefiles)
+        are completely defined in standard Ruby syntax.\n    No XML files to edit.
+        No quirky Makefile syntax to worry about (is that a tab or a space?)\n  *
+        Users can specify tasks with prerequisites.\n  * Rake supports rule patterns
+        to synthesize implicit tasks.\n  * Flexible FileLists that act like arrays
+        but know about manipulating file names and paths.\n  * Supports parallel execution
+        of tasks.\n","licenses":["MIT"],"metadata":{"changelog_uri":"https://github.com/ruby/rake/blob/v13.0.6/History.rdoc","bug_tracker_uri":"https://github.com/ruby/rake/issues","source_code_uri":"https://github.com/ruby/rake/tree/v13.0.6","documentation_uri":"https://ruby.github.io/rake"},"yanked":false,"sha":"5ce4bf5037b4196c24ac62834d8db1ce175470391026bd9e557d669beeb19097","project_uri":"https://rubygems.org/gems/rake","gem_uri":"https://rubygems.org/gems/rake-13.0.6.gem","homepage_uri":"https://github.com/ruby/rake","wiki_uri":null,"documentation_uri":"https://ruby.github.io/rake","mailing_list_uri":null,"source_code_uri":"https://github.com/ruby/rake/tree/v13.0.6","bug_tracker_uri":"https://github.com/ruby/rake/issues","changelog_uri":"https://github.com/ruby/rake/blob/v13.0.6/History.rdoc","funding_uri":null,"dependencies":{"development":[],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:04 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/ruby-progressbar.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e859a215-661e-45f7-8158-dac9331ef246
+      X-Runtime:
+      - '0.016390'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.88.209.40:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11950-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001384.395250,VS0,VE147
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"d39df844d3c002ebdbf8d6aad831664b"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"ruby-progressbar","downloads":207237663,"version":"1.11.0","version_created_at":"2020-12-31T03:01:41.672Z","version_downloads":37478625,"platform":"ruby","authors":"thekompanee,
+        jfelchner","info":"Ruby/ProgressBar is an extremely flexible text progress
+        bar library for Ruby. The output can be customized with a flexible formatting
+        system including: percentage, bars of various formats, elapsed time and estimated
+        time remaining.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/jfelchner/ruby-progressbar/wiki","homepage_uri":"https://github.com/jfelchner/ruby-progressbar","changelog_uri":"https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/jfelchner/ruby-progressbar/issues","source_code_uri":"https://github.com/jfelchner/ruby-progressbar","documentation_uri":"https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0"},"yanked":false,"sha":"cc127db3866dc414ffccbf92928a241e585b3aa2b758a5563e74a6ee0f57d50a","project_uri":"https://rubygems.org/gems/ruby-progressbar","gem_uri":"https://rubygems.org/gems/ruby-progressbar-1.11.0.gem","homepage_uri":"https://github.com/jfelchner/ruby-progressbar","wiki_uri":"https://github.com/jfelchner/ruby-progressbar/wiki","documentation_uri":"https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0","mailing_list_uri":null,"source_code_uri":"https://github.com/jfelchner/ruby-progressbar","bug_tracker_uri":"https://github.com/jfelchner/ruby-progressbar/issues","changelog_uri":"https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"fuubar","requirements":"~\u003e
+        2.3"},{"name":"rspec","requirements":"~\u003e 3.7"},{"name":"rspectacular","requirements":"~\u003e
+        0.70.6"},{"name":"timecop","requirements":"= 0.6.0"}],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:04 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/thor.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 33a73e61-dfc0-4d8f-a3e0-8b95f3631db1
+      X-Runtime:
+      - '0.021298'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 54.70.75.100:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11960-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001385.676723,VS0,VE162
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"771633bef4f378620f24e744c4564d5f"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"thor","downloads":454939773,"version":"1.1.0","version_created_at":"2021-01-20T16:54:30.555Z","version_downloads":45203550,"platform":"ruby","authors":"Yehuda
+        Katz, José Valim","info":"Thor is a toolkit for building powerful command-line
+        interfaces.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/erikhuda/thor/wiki","changelog_uri":"https://github.com/erikhuda/thor/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/erikhuda/thor/issues","source_code_uri":"https://github.com/erikhuda/thor/tree/v1.1.0","documentation_uri":"http://whatisthor.com/"},"yanked":false,"sha":"cacae12a3761be4ccbe63be19261352b108f86c721c37d87664328efeaa6d0a3","project_uri":"https://rubygems.org/gems/thor","gem_uri":"https://rubygems.org/gems/thor-1.1.0.gem","homepage_uri":"http://whatisthor.com/","wiki_uri":"https://github.com/erikhuda/thor/wiki","documentation_uri":"http://whatisthor.com/","mailing_list_uri":null,"source_code_uri":"https://github.com/erikhuda/thor/tree/v1.1.0","bug_tracker_uri":"https://github.com/erikhuda/thor/issues","changelog_uri":"https://github.com/erikhuda/thor/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
+        1.0, \u003c 3"}],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:04 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rspec.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:04 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65c5c97a-aee4-4f09-8d18-b23404723660
+      X-Runtime:
+      - '0.015761'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 54.70.75.100:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11965-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001385.982991,VS0,VE148
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"efd4623c54aecd9205f5c5a8f82184a5"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"rspec","downloads":572480317,"version":"3.10.0","version_created_at":"2020-10-30T14:33:42.785Z","version_downloads":31381541,"platform":"ruby","authors":"Steven
+        Baker, David Chelimsky, Myron Marston","info":"BDD for Ruby","licenses":["MIT"],"metadata":{"bug_tracker_uri":"https://github.com/rspec/rspec/issues","source_code_uri":"https://github.com/rspec/rspec","mailing_list_uri":"https://groups.google.com/forum/#!forum/rspec","documentation_uri":"https://rspec.info/documentation/"},"yanked":false,"sha":"b870b43d49ae4a4e063b94976d2742b0854ec10458c425d569b5556ee5898ab7","project_uri":"https://rubygems.org/gems/rspec","gem_uri":"https://rubygems.org/gems/rspec-3.10.0.gem","homepage_uri":"http://github.com/rspec","wiki_uri":null,"documentation_uri":"https://rspec.info/documentation/","mailing_list_uri":"https://groups.google.com/forum/#!forum/rspec","source_code_uri":"https://github.com/rspec/rspec","bug_tracker_uri":"https://github.com/rspec/rspec/issues","changelog_uri":null,"funding_uri":null,"dependencies":{"development":[],"runtime":[{"name":"rspec-core","requirements":"~\u003e
+        3.10.0"},{"name":"rspec-expectations","requirements":"~\u003e 3.10.0"},{"name":"rspec-mocks","requirements":"~\u003e
+        3.10.0"}]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:05 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rubocop.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f76fae3f-3e8e-4258-bd01-143a24d0e094
+      X-Runtime:
+      - '0.022199'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 44.239.42.136:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11937-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001385.274280,VS0,VE149
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"e13b04c4744ebd87809bc7679c974217"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"rubocop","downloads":193707137,"version":"1.23.0","version_created_at":"2021-11-15T08:10:45.792Z","version_downloads":336976,"platform":"ruby","authors":"Bozhidar
+        Batsov, Jonas Arvidsson, Yuji Nakayama","info":"    RuboCop is a Ruby code
+        style checking and code formatting tool.\n    It aims to enforce the community-driven
+        Ruby Style Guide.\n","licenses":["MIT"],"metadata":{"homepage_uri":"https://rubocop.org/","changelog_uri":"https://github.com/rubocop/rubocop/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/rubocop/rubocop/issues","source_code_uri":"https://github.com/rubocop/rubocop/","documentation_uri":"https://docs.rubocop.org/rubocop/1.23/","rubygems_mfa_required":"true"},"yanked":false,"sha":"0b0b110eb9309a750d02f4549dfdc5399d3384ddfd6758cb3e4bd3551a5e3b0e","project_uri":"https://rubygems.org/gems/rubocop","gem_uri":"https://rubygems.org/gems/rubocop-1.23.0.gem","homepage_uri":"https://rubocop.org/","wiki_uri":null,"documentation_uri":"https://docs.rubocop.org/rubocop/1.23/","mailing_list_uri":null,"source_code_uri":"https://github.com/rubocop/rubocop/","bug_tracker_uri":"https://github.com/rubocop/rubocop/issues","changelog_uri":"https://github.com/rubocop/rubocop/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
+        1.15.0, \u003c 3.0"}],"runtime":[{"name":"parallel","requirements":"~\u003e
+        1.10"},{"name":"parser","requirements":"\u003e= 3.0.0.0"},{"name":"rainbow","requirements":"\u003e=
+        2.2.2, \u003c 4.0"},{"name":"regexp_parser","requirements":"\u003e= 1.8, \u003c
+        3.0"},{"name":"rexml","requirements":"\u003e= 0"},{"name":"rubocop-ast","requirements":"\u003e=
+        1.12.0, \u003c 2.0"},{"name":"ruby-progressbar","requirements":"~\u003e 1.7"},{"name":"unicode-display_width","requirements":"\u003e=
+        1.4.0, \u003c 3.0"}]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:05 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/simplecov.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 477143d1-041f-4eb2-befe-db5628be2cb3
+      X-Runtime:
+      - '0.019549'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.88.209.40:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11941-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001386.573116,VS0,VE150
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"f825572aa3df7b5ab0f166e1476436d6"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"simplecov","downloads":164816259,"version":"0.21.2","version_created_at":"2021-01-09T13:35:22.193Z","version_downloads":12788286,"platform":"ruby","authors":"Christoph
+        Olszowka, Tobias Pfeiffer","info":"Code coverage for Ruby with a powerful
+        configuration library and automatic merging of coverage across test suites","licenses":["MIT"],"metadata":{"changelog_uri":"https://github.com/simplecov-ruby/simplecov/blob/main/CHANGELOG.md","bug_tracker_uri":"https://github.com/simplecov-ruby/simplecov/issues","source_code_uri":"https://github.com/simplecov-ruby/simplecov/tree/v0.21.2","mailing_list_uri":"https://groups.google.com/forum/#!forum/simplecov","documentation_uri":"https://www.rubydoc.info/gems/simplecov/0.21.2"},"yanked":false,"sha":"990db6aedb55086d6bf8874993ff1f796e4830abfa11937468ca502a0d013bc3","project_uri":"https://rubygems.org/gems/simplecov","gem_uri":"https://rubygems.org/gems/simplecov-0.21.2.gem","homepage_uri":"https://github.com/simplecov-ruby/simplecov","wiki_uri":null,"documentation_uri":"https://www.rubydoc.info/gems/simplecov/0.21.2","mailing_list_uri":"https://groups.google.com/forum/#!forum/simplecov","source_code_uri":"https://github.com/simplecov-ruby/simplecov/tree/v0.21.2","bug_tracker_uri":"https://github.com/simplecov-ruby/simplecov/issues","changelog_uri":"https://github.com/simplecov-ruby/simplecov/blob/main/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[],"runtime":[{"name":"docile","requirements":"~\u003e
+        1.1"},{"name":"simplecov-html","requirements":"~\u003e 0.11"},{"name":"simplecov_json_formatter","requirements":"~\u003e
+        0.1"}]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:05 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/vcr.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:05 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30263fb6-2418-4d6b-9471-cc16d42db10f
+      X-Runtime:
+      - '0.023679'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.88.209.40:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:06 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11955-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001386.873363,VS0,VE155
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"6114051a723682762eaa684a869a6406"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcr","downloads":55636566,"version":"6.0.0","version_created_at":"2020-05-28T07:35:18.868Z","version_downloads":8736871,"platform":"ruby","authors":"Myron
+        Marston, Kurtis Rainbolt-Greene, Olle Jonsson","info":"Record your test suite''s
+        HTTP interactions and replay them during future test runs for fast, deterministic,
+        accurate tests.","licenses":["Hippocratic-2.1","MIT"],"metadata":{},"yanked":false,"sha":"6a28a042cd65fc70b8c02a8e32ef71a423c8387bf2994e35824b4ec94f1132c9","project_uri":"https://rubygems.org/gems/vcr","gem_uri":"https://rubygems.org/gems/vcr-6.0.0.gem","homepage_uri":"https://relishapp.com/vcr/vcr/docs","wiki_uri":"","documentation_uri":"https://www.relishapp.com/vcr/vcr","mailing_list_uri":"http://groups.google.com/group/vcr-ruby","source_code_uri":"https://github.com/vcr/vcr","bug_tracker_uri":"https://github.com/vcr/vcr/issues","changelog_uri":null,"funding_uri":null,"dependencies":{"development":[{"name":"aruba","requirements":"~\u003e
+        0.14.14"},{"name":"bundler","requirements":"~\u003e 2.0"},{"name":"codeclimate-test-reporter","requirements":"~\u003e
+        0.4"},{"name":"cucumber","requirements":"~\u003e 3.1"},{"name":"excon","requirements":"\u003e=
+        0.62.0"},{"name":"faraday","requirements":"\u003e= 0.11.0, \u003c 2.0.0"},{"name":"hashdiff","requirements":"\u003e=
+        1.0.0.beta1, \u003c 2.0.0"},{"name":"httpclient","requirements":"\u003e= 0"},{"name":"json","requirements":"\u003e=
+        0"},{"name":"mime-types","requirements":"\u003e= 0"},{"name":"pry","requirements":"~\u003e
+        0.9"},{"name":"pry-doc","requirements":"~\u003e 0.6"},{"name":"rack","requirements":"\u003e=
+        0"},{"name":"rake","requirements":"~\u003e 10.1"},{"name":"relish","requirements":"\u003e=
+        0"},{"name":"rspec","requirements":"~\u003e 3.0"},{"name":"sinatra","requirements":"\u003e=
+        0"},{"name":"test-unit","requirements":"~\u003e 3.1.4"},{"name":"timecop","requirements":"\u003e=
+        0"},{"name":"webmock","requirements":"\u003e= 0"},{"name":"yard","requirements":"\u003e=
+        0"}],"runtime":[]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:06 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/webmock.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.2 (2020-10-01))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 27 Nov 2021 08:23:06 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 68865099-a33b-42ef-8fc7-d32d5b1e4ef9
+      X-Runtime:
+      - '0.017268'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 44.239.42.136:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 27 Nov 2021 08:23:06 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-tyo11974-TYO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638001386.176110,VS0,VE130
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"8a22bac9e65ab7f6d0dea8c8facc8715"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"webmock","downloads":133482155,"version":"3.14.0","version_created_at":"2021-08-05T09:47:44.815Z","version_downloads":3041540,"platform":"ruby","authors":"Bartosz
+        Blimke","info":"WebMock allows stubbing HTTP requests and setting expectations
+        on HTTP requests.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/bblimke/webmock/wiki","changelog_uri":"https://github.com/bblimke/webmock/blob/v3.14.0/CHANGELOG.md","bug_tracker_uri":"https://github.com/bblimke/webmock/issues","source_code_uri":"https://github.com/bblimke/webmock/tree/v3.14.0","documentation_uri":"https://www.rubydoc.info/gems/webmock/3.14.0"},"yanked":false,"sha":"b317a4f6fa7ebcc1e6e2cba29f01fccc12a5e9aa4365b037c34ca4072e821bd1","project_uri":"https://rubygems.org/gems/webmock","gem_uri":"https://rubygems.org/gems/webmock-3.14.0.gem","homepage_uri":"http://github.com/bblimke/webmock","wiki_uri":"https://github.com/bblimke/webmock/wiki","documentation_uri":"https://www.rubydoc.info/gems/webmock/3.14.0","mailing_list_uri":null,"source_code_uri":"https://github.com/bblimke/webmock/tree/v3.14.0","bug_tracker_uri":"https://github.com/bblimke/webmock/issues","changelog_uri":"https://github.com/bblimke/webmock/blob/v3.14.0/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"async-http","requirements":"\u003e=
+        0.48.0"},{"name":"curb","requirements":"\u003e= 0.7.16"},{"name":"em-http-request","requirements":"\u003e=
+        1.0.2"},{"name":"em-synchrony","requirements":"\u003e= 1.0.0"},{"name":"excon","requirements":"\u003e=
+        0.27.5"},{"name":"http","requirements":"\u003e= 0.8.0"},{"name":"httpclient","requirements":"\u003e=
+        2.2.4"},{"name":"minitest","requirements":"\u003e= 5.0.0"},{"name":"patron","requirements":"\u003e=
+        0.4.18"},{"name":"rack","requirements":"\u003e 1.6"},{"name":"rdoc","requirements":"\u003e
+        3.5.0"},{"name":"rspec","requirements":"\u003e= 3.1.0"},{"name":"test-unit","requirements":"\u003e=
+        3.0.0"},{"name":"typhoeus","requirements":"\u003e= 0.5.0"},{"name":"webrick","requirements":"\u003e=
+        0"}],"runtime":[{"name":"addressable","requirements":"\u003e= 2.8.0"},{"name":"crack","requirements":"\u003e=
+        0.3.2"},{"name":"hashdiff","requirements":"\u003e= 0.4.0, \u003c 2.0.0"}]}}'
+  recorded_at: Sat, 27 Nov 2021 08:23:06 GMT
+recorded_with: VCR 6.0.0
