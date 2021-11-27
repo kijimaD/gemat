@@ -20,7 +20,7 @@ module Gemat
         begin
           response = JSON.parse(request.body)
         rescue JSON::ParserError
-          print "not found\n"
+          print "\n#{gem.name} is not found..."
           next
         end
         # puts JSON.pretty_generate(response)

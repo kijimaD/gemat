@@ -17,7 +17,7 @@ module Gemat
 
   class Gemat
     def self.run(options = {}, &block)
-      dsl = InDsl.new
+      dsl = InDsl.new(options[:input])
       fetcher = Fetcher.new(dsl)
       fetcher.run
       block.call(fetcher.gems)
