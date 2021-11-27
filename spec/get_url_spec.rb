@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/get_url'
-
-RSpec.describe Gemat::GetUrl do
+RSpec.describe Gemat::Fetcher do
   describe '#run' do
     it 'set @urls' do
       dsl_mock = instance_double('dsl')
@@ -10,7 +8,7 @@ RSpec.describe Gemat::GetUrl do
       allow(dsl_mock).to receive(:dependencies).and_return([dependencies_mock])
       allow(dependencies_mock).to receive(:name).and_return('rails')
 
-      dsl = Gemat::GetUrl.new(dsl_mock)
+      dsl = described_class.new(dsl_mock)
       dsl.run
       expect(dsl.urls).to eq({ 'rails' => 'https://github.com/rails/rails' })
     end
