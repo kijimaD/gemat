@@ -16,7 +16,6 @@ RSpec.describe Gemat::Dsl do
         expect(dsl.sources).not_to be nil
         expect(dsl.git_sources).not_to be nil
         expect(dsl.groups).not_to be nil
-        expect(dsl.gemspecs).not_to be nil
       end
     end
   end
