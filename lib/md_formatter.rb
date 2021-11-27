@@ -4,16 +4,16 @@ require 'logger'
 
 module Gemat
   class MdFormatter
-    def initialize(url)
-      @url = url
+    def initialize(gems)
+      @gems = gems
     end
 
     def to_md
       print "\n\n"
       puts '| gem | Repo URL |'
       puts '| ---- | ---- |'
-      @url.urls.each do |k, v|
-        puts "| #{k} | #{v} |"
+      @gems.each do |gem|
+        puts "| #{gem.name} | #{gem.repo_url} |"
       end
     end
   end

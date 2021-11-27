@@ -18,9 +18,9 @@ module Gemat
   class Gemat
     def self.run(&block)
       dsl = InDsl.new
-      url = Fetcher.new(dsl)
-      url.run
-      block.call(url)
+      fetcher = Fetcher.new(dsl)
+      fetcher.run
+      block.call(fetcher.gems)
     end
   end
 end
