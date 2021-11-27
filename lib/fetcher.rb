@@ -16,7 +16,7 @@ module Gemat
         sleep 0.1
 
         client = HTTPClient.new
-        request = client.get(rubygems_api(gem))
+        request = client.get(rubygems_api(gem.name))
         begin
           response = JSON.parse(request.body)
         rescue JSON::ParserError
@@ -32,8 +32,10 @@ module Gemat
     end
     # rubocop:enable Metrics/MethodLength
 
-    def rubygems_api(gem)
-      "https://rubygems.org/api/v1/gems/#{gem.name}.json"
+    private
+
+    def rubygems_api(name)
+      "https://rubygems.org/api/v1/gems/#{name}.json"
     end
   end
 end
