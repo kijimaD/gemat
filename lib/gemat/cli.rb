@@ -9,9 +9,9 @@ module Gemat
     end
 
     desc 'md', 'export Gemfile to markdown'
-    method_options input: :string, output: :string
+    method_options input: :string, output: :string, columns: :array
     def md
-      Gemat.run(options) { |gems| MdFormatter.new(gems, options[:output]).to_md }
+      Gemat.run(options) { |gems, columns| MdFormatter.new(gems, columns, output: options[:output]).to_md }
     end
   end
 end

@@ -2,8 +2,9 @@
 
 module Gemat
   class MdFormatter
-    def initialize(gems, output = nil)
+    def initialize(gems, dsls = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
       @gems = gems
+      @dsls = dsls
       @output = output
       @rows = []
       gen_rows
@@ -11,7 +12,7 @@ module Gemat
 
     def to_md
       if @output
-        File.open(@output, 'w') { |file| each_write(@rows) { |string| file.<< string } }
+        File.open(@output, 'w') { |file| each_write(@rows) { |string| file << string } }
       else
         print "\n\n"
         each_write(@rows) { |string| print string }
@@ -21,10 +22,10 @@ module Gemat
     private
 
     def gen_rows
-      @rows << '| gem | Repo URL |'
+      @rows << "| #{@dsls.map(&:column_name).join(' | ')} |"
       @rows << '| ---- | ---- |'
       @gems.each do |gem|
-        @rows << "| #{gem.name} | #{gem.repo_url} |"
+        @rows << "| #{@dsls.map { |dsl| dsl.call(gem) }.join(' | ')} |"
       end
     end
 
