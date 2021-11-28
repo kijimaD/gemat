@@ -2,7 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'csv'
 gem 'httpclient'
 gem 'rake'
 gem 'ruby-progressbar'

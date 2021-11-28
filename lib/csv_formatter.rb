@@ -2,23 +2,12 @@
 
 module Gemat
   class CsvFormatter < Formatter
-    def run
-      if @write_path
-        CSV.open(@write_path, 'w') do |csv|
-          @rows.each { |row| csv << row }
-        end
-      else
-        print "\n\n"
-        @rows.each { |row| print row.to_csv }
-      end
-    end
-
     private
 
     def gen_rows
-      @rows << @columns.map(&:column_name)
+      @rows << @columns.map(&:column_name).join(',')
       @gems.each do |gem|
-        @rows << @columns.map { |dsl| dsl.call(gem) }
+        @rows << @columns.map { |dsl| dsl.call(gem) }.join(',')
       end
     end
   end

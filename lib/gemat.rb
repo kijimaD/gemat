@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bundler'
-require 'csv'
 require 'httpclient'
 require 'json'
 require 'ruby-progressbar'
@@ -23,11 +22,7 @@ module Gemat
   class Gemat
     def self.run(options = {}, &block)
       dsl = InDsl.new(options[:input])
-      outdsls = if options[:columns]
-                  options[:columns].map { |column| OutDsl.new(column) }
-                else
-                  [OutDsl.new('name'), OutDsl.new('repo_url')]
-                end
+      outdsls = OutDsl.create(options[:columns])
       fetcher = Fetcher.new(dsl)
       fetcher.run
       block.call(fetcher.gems, outdsls)

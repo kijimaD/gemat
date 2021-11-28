@@ -2,7 +2,24 @@
 
 module Gemat
   class OutDsl
+    INDEX = 'index'
+    NAME = 'name'
+    REPO_URL = 'repo_url'
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL].freeze
+
     attr_accessor :column_name
+
+    def self.new_by_array(columns)
+      columns.map { |column| new(column) }
+    end
+
+    def self.create(columns)
+      if columns
+        new_by_array(columns)
+      else
+        new_by_array(DEFAULT_COLUMNS)
+      end
+    end
 
     def initialize(column_name)
       @column_name = column_name
@@ -16,11 +33,11 @@ module Gemat
 
     def set_lambda
       case @column_name
-      when 'name'
+      when NAME
         @lambda = name
-      when 'repo_url'
+      when REPO_URL
         @lambda = repo_url
-      when 'index'
+      when INDEX
         @lambda = index
       end
     end
@@ -38,5 +55,3 @@ module Gemat
     end
   end
 end
-
-# "gemat md --column name repo_url"

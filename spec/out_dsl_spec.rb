@@ -10,7 +10,7 @@ RSpec.describe Gemat::OutDsl do
         gem = fetcher.gems.first
 
         dsl = Gemat::OutDsl.new('name')
-        expect(dsl.call(gem)).to eq('csv')
+        expect(dsl.call(gem)).to eq('httpclient')
       end
     end
   end
