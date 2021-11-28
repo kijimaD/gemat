@@ -8,6 +8,7 @@ require 'ruby-progressbar'
 require 'thor'
 
 require_relative 'in_dsl'
+require_relative 'out_dsl'
 require_relative 'fetcher'
 require_relative 'gem'
 require_relative 'csv_formatter'
@@ -21,9 +22,14 @@ module Gemat
   class Gemat
     def self.run(options = {}, &block)
       dsl = InDsl.new(options[:input])
+      if options[:columns]
+        outdsls = options[:columns].map { |column| OutDsl.new(column) }
+      else
+        outdsls = [OutDsl.new('name'), OutDsl.new('repo_url')]
+      end
       fetcher = Fetcher.new(dsl)
       fetcher.run
-      block.call(fetcher.gems)
+      block.call(fetcher.gems, outdsls)
     end
   end
 end

@@ -3,9 +3,9 @@
 module Gemat
   class Cli < Thor
     desc 'csv', 'export Gemfile to CSV file'
-    method_options input: :string, output: :string
+    method_options input: :string, output: :string, columns: :array
     def csv
-      Gemat.run(options) { |gems| CsvFormatter.new(gems, options[:output]).to_csv }
+      Gemat.run(options) { |gems, columns| CsvFormatter.new(gems, columns, output: options[:output]).to_csv }
     end
 
     desc 'md', 'export Gemfile to markdown'

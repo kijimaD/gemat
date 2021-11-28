@@ -26,9 +26,9 @@ RSpec.describe Gemat do
     it 'can run' do
       VCR.use_cassette 'Rubygems_fixture' do
         capture(:stdout) do
-          Gemat::Cli.start(['csv', '--input', './spec/fixtures/Gemfile_test', '--output', 'test.csv'])
+          # FIXME: can not display columns
+          Gemat::Cli.start(['csv', '--input', './spec/fixtures/Gemfile_test', '--columns', 'name', 'repo_url'])
         end
-        File.delete('test.csv')
       end
     end
   end
