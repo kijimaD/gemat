@@ -2,7 +2,21 @@
 
 module Gemat
   class OutDsl
+    DEFAULT_COLUMNS = %w[index name repo_url]
+
     attr_accessor :column_name
+
+    def self.new_by_array(columns)
+      columns.map { |column| new(column) }
+    end
+
+    def self.create(columns)
+      if columns
+        new_by_array(columns)
+      else
+        new_by_array(DEFAULT_COLUMNS)
+      end
+    end
 
     def initialize(column_name)
       @column_name = column_name
