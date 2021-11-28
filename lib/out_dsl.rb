@@ -2,7 +2,7 @@
 
 module Gemat
   class OutDsl
-    DEFAULT_COLUMNS = %w[index name repo_url]
+    DEFAULT_COLUMNS = %w[index name repo_url].freeze
 
     attr_accessor :column_name
 
