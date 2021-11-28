@@ -2,9 +2,9 @@
 
 module Gemat
   class CsvFormatter
-    def initialize(gems, dsls = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
+    def initialize(gems, columns = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
       @gems = gems
-      @dsls = dsls
+      @columns = columns
       @output = output
       @rows = []
       gen_rows
@@ -24,9 +24,9 @@ module Gemat
     private
 
     def gen_rows
-      @rows << @dsls.map(&:column_name)
+      @rows << @columns.map(&:column_name)
       @gems.each do |gem|
-        @rows << @dsls.map { |dsl| dsl.call(gem) }
+        @rows << @columns.map { |dsl| dsl.call(gem) }
       end
     end
   end

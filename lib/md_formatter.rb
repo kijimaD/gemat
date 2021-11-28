@@ -2,9 +2,9 @@
 
 module Gemat
   class MdFormatter
-    def initialize(gems, dsls = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
+    def initialize(gems, columns = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
       @gems = gems
-      @dsls = dsls
+      @columns = columns
       @output = output
       @rows = []
       gen_rows
@@ -22,10 +22,10 @@ module Gemat
     private
 
     def gen_rows
-      @rows << "| #{@dsls.map(&:column_name).join(' | ')} |"
-      @rows << '| ---- | ---- |'
+      @rows << "| #{@columns.map(&:column_name).join(' | ')} |"
+      @rows << "| #{Array.new(@columns.length, '----').join(' | ')} |"
       @gems.each do |gem|
-        @rows << "| #{@dsls.map { |dsl| dsl.call(gem) }.join(' | ')} |"
+        @rows << "| #{@columns.map { |dsl| dsl.call(gem) }.join(' | ')} |"
       end
     end
 
