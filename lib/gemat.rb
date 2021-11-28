@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bundler'
-require 'csv'
 require 'httpclient'
 require 'json'
 require 'ruby-progressbar'

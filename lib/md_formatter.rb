@@ -4,7 +4,9 @@ module Gemat
   class MdFormatter < Formatter
     def run
       if @write_path
-        File.open(@write_path, 'w') { |file| each_write(@rows) { |string| file << string } }
+        File.open(@write_path, 'w') do |file|
+          each_write(@rows) { |string| file << string }
+        end
       else
         print "\n\n"
         each_write(@rows) { |string| print string }
