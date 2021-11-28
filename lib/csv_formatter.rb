@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
-require 'csv'
-
 module Gemat
-  class CsvFormatter
-    def initialize(gems, output = nil)
-      @gems = gems
-      @output = output
-      @rows = []
-      gen_rows
-    end
-
-    def to_csv
-      if @output
-        CSV.open(@output, 'w') do |csv|
+  class CsvFormatter < Formatter
+    def run
+      if @write_path
+        CSV.open(@write_path, 'w') do |csv|
           @rows.each { |row| csv << row }
         end
       else
@@ -25,9 +16,9 @@ module Gemat
     private
 
     def gen_rows
-      @rows << ['gem', 'Repo URL']
+      @rows << @columns.map(&:column_name)
       @gems.each do |gem|
-        @rows << [gem.name, gem.repo_url]
+        @rows << @columns.map { |dsl| dsl.call(gem) }
       end
     end
   end

@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
-require 'logger'
-
 module Gemat
-  class MdFormatter
-    def initialize(gems, output = nil)
-      @gems = gems
-      @output = output
-      @rows = []
-      gen_rows
-    end
-
-    def to_md
-      if @output
-        File.open(@output, 'w') { |file| each_write(@rows) { |string| file.<< string } }
+  class MdFormatter < Formatter
+    def run
+      if @write_path
+        File.open(@write_path, 'w') { |file| each_write(@rows) { |string| file << string } }
       else
         print "\n\n"
         each_write(@rows) { |string| print string }
@@ -23,10 +14,10 @@ module Gemat
     private
 
     def gen_rows
-      @rows << '| gem | Repo URL |'
-      @rows << '| ---- | ---- |'
+      @rows << "| #{@columns.map(&:column_name).join(' | ')} |"
+      @rows << "| #{Array.new(@columns.length, '----').join(' | ')} |"
       @gems.each do |gem|
-        @rows << "| #{gem.name} | #{gem.repo_url} |"
+        @rows << "| #{@columns.map { |dsl| dsl.call(gem) }.join(' | ')} |"
       end
     end
 
