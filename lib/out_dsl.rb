@@ -43,7 +43,7 @@ module Gemat
     end
 
     def name
-      ->(gem) { gem.name }
+      ->(gem) { gem.response['name'] }
     end
 
     def repo_url

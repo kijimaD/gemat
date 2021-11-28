@@ -2,15 +2,11 @@
 
 module Gemat
   class Gem
-    attr_accessor :index
+    attr_accessor :index, :response
 
     def initialize(response)
       @response = response
       @index = 0
-    end
-
-    def name
-      @response['name']
     end
 
     def repo_url
