@@ -22,11 +22,11 @@ module Gemat
   class Gemat
     def self.run(options = {}, &block)
       dsl = InDsl.new(options[:input])
-      if options[:columns]
-        outdsls = options[:columns].map { |column| OutDsl.new(column) }
-      else
-        outdsls = [OutDsl.new('name'), OutDsl.new('repo_url')]
-      end
+      outdsls = if options[:columns]
+                  options[:columns].map { |column| OutDsl.new(column) }
+                else
+                  [OutDsl.new('name'), OutDsl.new('repo_url')]
+                end
       fetcher = Fetcher.new(dsl)
       fetcher.run
       block.call(fetcher.gems, outdsls)
