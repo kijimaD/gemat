@@ -18,6 +18,7 @@ module Gemat
       else
         print "\n\n"
         each_write(@rows) { |string| print string }
+        print "\n"
       end
     end
 

@@ -10,3 +10,10 @@ build:
 	rake install
 publish:
 	rake release
+re:
+	make build
+	gemat md
+check:
+	make test
+	make lint
+	make re

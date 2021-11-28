@@ -28,7 +28,7 @@ jobs:
     - name: Build
       run: make build
     - name: Test run
-      run: gemat csv
+      run: gemat csv --output test.csv --columns index name
     - name: Test run
       run: gemat md
 
