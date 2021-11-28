@@ -24,10 +24,10 @@ RSpec.describe Gemat do
 
   describe 'command line' do
     it 'can run' do
-      VCR.use_cassette 'Rubygems_fixture' do
+      VCR.use_cassette 'Rubygems' do
         capture(:stdout) do
           # FIXME: can not display columns
-          Gemat::Cli.start(['csv', '--input', './spec/fixtures/Gemfile_test', '--columns', 'name', 'repo_url'])
+          Gemat::Cli.start(['md'])
         end
       end
     end
