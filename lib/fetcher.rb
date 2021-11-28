@@ -12,10 +12,10 @@ module Gemat
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each_with_index do |gem, idx|
-        sleep 0.1
         pb.increment
 
         response = fetch(gem)
+        sleep 0.2
         next unless response
 
         gem = Gem.new(response)
