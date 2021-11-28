@@ -3,8 +3,18 @@
 
 # Gemat
 
-Gemat is a Ruby gem for exporing Gemfile to several formats! e.g. CSV, Markdown etc.
-![Screenshot_2021-11-27_14-13-58](https://user-images.githubusercontent.com/11595790/143669007-582ad8d2-03c3-46d3-a113-e63945f38406.png)
+Gemat is a Ruby gem for curating and exporing Gemfile to several formats!
+
+```shell
+$ gemat md
+
+| index | name | repo_url |
+| ---- | ---- | ---- |
+| 0 | httpclient | https://github.com/nahi/httpclient |
+| 1 | rake | https://github.com/ruby/rake |
+| 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar |
+| 3 | thor | https://github.com/erikhuda/thor |
+```
 
 ## Installation
 
@@ -23,8 +33,15 @@ Or install it yourself as:
 ## Usage
 
 ```shell
+# at your bundled project...
+
 $ gemat csv # export to CSV
-$ gemat md # export to markdown table
+$ gemat md # export to markdown
+
+# optional arguments
+$ gemat csv --input ~/path/to/Gemfile # specify gemfile
+$ gemat csv --output test.csv         # specify writing file
+$ gemat csv --columns name repo_url # specify need column, order
 ```
 
 ## Development
