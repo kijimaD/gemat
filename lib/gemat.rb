@@ -26,7 +26,7 @@ module Gemat
       outdsls = if options[:columns]
                   options[:columns].map { |column| OutDsl.new(column) }
                 else
-                  [OutDsl.new('name'), OutDsl.new('repo_url')]
+                  [OutDsl.new('index'), OutDsl.new('name'), OutDsl.new('repo_url')]
                 end
       fetcher = Fetcher.new(dsl)
       fetcher.run

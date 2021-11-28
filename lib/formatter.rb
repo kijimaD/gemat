@@ -2,7 +2,7 @@
 
 module Gemat
   class Formatter
-    def initialize(gems, columns = [OutDsl.new('name'), OutDsl.new('Repo URL')], write_path: nil)
+    def initialize(gems, columns, write_path: nil)
       @gems = gems
       @columns = columns
       @write_path = write_path
