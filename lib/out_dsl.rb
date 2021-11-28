@@ -2,7 +2,10 @@
 
 module Gemat
   class OutDsl
-    DEFAULT_COLUMNS = %w[index name repo_url].freeze
+    INDEX = 'index'
+    NAME = 'name'
+    REPO_URL = 'repo_url'
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL].freeze
 
     attr_accessor :column_name
 
@@ -30,11 +33,11 @@ module Gemat
 
     def set_lambda
       case @column_name
-      when 'name'
+      when NAME
         @lambda = name
-      when 'repo_url'
+      when REPO_URL
         @lambda = repo_url
-      when 'index'
+      when INDEX
         @lambda = index
       end
     end
