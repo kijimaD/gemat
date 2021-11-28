@@ -52,5 +52,3 @@ module Gemat
     end
   end
 end
-
-# "gemat md --column name repo_url"
