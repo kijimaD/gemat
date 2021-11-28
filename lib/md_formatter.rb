@@ -1,18 +1,10 @@
 # frozen_string_literal: true
 
 module Gemat
-  class MdFormatter
-    def initialize(gems, columns = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
-      @gems = gems
-      @columns = columns
-      @output = output
-      @rows = []
-      gen_rows
-    end
-
-    def to_md
-      if @output
-        File.open(@output, 'w') { |file| each_write(@rows) { |string| file << string } }
+  class MdFormatter < Formatter
+    def run
+      if @write_path
+        File.open(@write_path, 'w') { |file| each_write(@rows) { |string| file << string } }
       else
         print "\n\n"
         each_write(@rows) { |string| print string }

@@ -1,18 +1,10 @@
 # frozen_string_literal: true
 
 module Gemat
-  class CsvFormatter
-    def initialize(gems, columns = [OutDsl.new('name'), OutDsl.new('Repo URL')], output: nil)
-      @gems = gems
-      @columns = columns
-      @output = output
-      @rows = []
-      gen_rows
-    end
-
-    def to_csv
-      if @output
-        CSV.open(@output, 'w') do |csv|
+  class CsvFormatter < Formatter
+    def run
+      if @write_path
+        CSV.open(@write_path, 'w') do |csv|
           @rows.each { |row| csv << row }
         end
       else
