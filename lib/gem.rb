@@ -2,8 +2,11 @@
 
 module Gemat
   class Gem
+    attr_accessor :index
+
     def initialize(response)
       @response = response
+      @index = 0
     end
 
     def name

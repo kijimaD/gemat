@@ -7,16 +7,22 @@ module Gemat
     def initialize(column_name)
       @column_name = column_name
 
-      case column_name
-      when 'name'
-        @lambda = name
-      when 'repo_url'
-        @lambda = repo_url
-      end
+      set_lambda
     end
 
     def call(gem)
       @lambda.call(gem)
+    end
+
+    def set_lambda
+      case @column_name
+      when 'name'
+        @lambda = name
+      when 'repo_url'
+        @lambda = repo_url
+      when 'index'
+        @lambda = index
+      end
     end
 
     def name
@@ -25,6 +31,10 @@ module Gemat
 
     def repo_url
       ->(gem) { gem.repo_url }
+    end
+
+    def index
+      ->(gem) { gem.index }
     end
   end
 end
