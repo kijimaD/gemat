@@ -5,7 +5,11 @@ module Gemat
     INDEX = 'index'
     NAME = 'name'
     REPO_URL = 'repo_url'
-    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL].freeze
+    GEM_URL = 'gem_url'
+    DOC_URL = 'doc_url'
+    LATEST_VERSION = 'latest_version'
+    AUTHOR = 'author'
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL, DOC_URL].freeze
 
     attr_accessor :column_name
 
@@ -39,6 +43,14 @@ module Gemat
         @lambda = repo_url
       when INDEX
         @lambda = index
+      when DOC_URL
+        @lambda = doc_url
+      when GEM_URL
+        @lambda = gem_url
+      when LATEST_VERSION
+        @lambda = latest_version
+      when AUTHOR
+        @lambda = author
       end
     end
 
@@ -46,12 +58,28 @@ module Gemat
       ->(gem) { gem.response['name'] }
     end
 
+    def index
+      ->(gem) { gem.index }
+    end
+
     def repo_url
       ->(gem) { gem.repo_url }
     end
 
-    def index
-      ->(gem) { gem.index }
+    def doc_url
+      ->(gem) { gem.response['documentation_uri'] }
+    end
+
+    def gem_url
+      ->(gem) { gem.response['gem_uri'] }
+    end
+
+    def latest_version
+      ->(gem) { gem.response['version'] }
+    end
+
+    def author
+      ->(gem) { gem.response['authors'] }
     end
   end
 end
