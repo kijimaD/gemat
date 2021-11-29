@@ -11,6 +11,9 @@ module Gemat
     AUTHORS = 'authors'
     DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI].freeze
 
+    RESPONSE_SOURCES = [NAME, DOC_URI, GEM_URI, LATEST_VERSION, AUTHORS].freeze
+    GEM_SOURCES = [INDEX, REPO_URI].freeze
+
     attr_accessor :column_name
 
     def self.new_by_array(columns)
@@ -35,39 +38,23 @@ module Gemat
       @lambda.call(gem)
     end
 
-    # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     def set_lambda
       case @column_name
-      when NAME
-        @lambda = rubygems_response(NAME)
-      when REPO_URI
-        @lambda = repo_uri
-      when INDEX
-        @lambda = index
-      when DOC_URI
-        @lambda = rubygems_response(DOC_URI)
-      when GEM_URI
-        @lambda = rubygems_response(GEM_URI)
-      when LATEST_VERSION
-        @lambda = rubygems_response(LATEST_VERSION)
-      when AUTHORS
-        @lambda = rubygems_response(AUTHORS)
+      when *RESPONSE_SOURCES
+        @lambda = rubygems_response(@column_name)
+      when *GEM_SOURCES
+        @lambda = gem_method(@column_name)
       else
         raise StandardError, "Contain invalid column name `#{@column_name}`!"
       end
     end
-    # rubocop:enable Metrics/MethodLength, Metrics/CyclomaticComplexity
 
     def rubygems_response(column)
       ->(gem) { gem.response[column] }
     end
 
-    def index
-      ->(gem) { gem.index }
-    end
-
-    def repo_uri
-      ->(gem) { gem.repo_uri }
+    def gem_method(column)
+      ->(gem) { gem.send(column) }
     end
   end
 end
