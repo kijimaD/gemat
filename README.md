@@ -13,6 +13,7 @@ $ gemat md
 | 0 | httpclient | https://github.com/nahi/httpclient | https://www.rubydoc.info/gems/httpclient/2.8.3 |
 | 1 | rake | https://github.com/ruby/rake | https://ruby.github.io/rake |
 | 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar | https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0 |
+| 3 | thor | https://github.com/erikhuda/thor | http://whatisthor.com/ |
 ```
 
 | index | name | repo_uri | documentation_uri |
@@ -20,6 +21,7 @@ $ gemat md
 | 0 | httpclient | https://github.com/nahi/httpclient | https://www.rubydoc.info/gems/httpclient/2.8.3 |
 | 1 | rake | https://github.com/ruby/rake | https://ruby.github.io/rake |
 | 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar | https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0 |
+| 3 | thor | https://github.com/erikhuda/thor | http://whatisthor.com/ |
 
 ## Installation
 
