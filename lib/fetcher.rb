@@ -11,27 +11,42 @@ module Gemat
 
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
-      @dsl.dependencies.each_with_index do |gem, idx|
+      @dsl.dependencies.each_with_index do |dependency, idx|
         pb.increment
 
-        response = fetch(gem)
-        sleep 0.2
+        response = fetch_rubygems(dependency)
         next unless response
 
-        gem = Gem.new(response)
-        gem.index = idx
-        @gems << gem
+        create_gem(response, idx)
+        sleep 0.2
       end
     end
 
     private
 
-    # rubocop:disable Metrics/MethodLength
-    def fetch(gem)
-      failed = []
+    def create_gem(rubygems, idx)
+      gem = Gem.new(rubygems)
+      gem.github = fetch_github(gem)
+      gem.index = idx
+      @gems << gem
+    end
 
+    def fetch_rubygems(gem)
+      fetch(rubygems_api(gem.name))
+    end
+
+    def fetch_github(gem, uri = nil)
+      uri ||= gem.repo_uri.gsub(/github.com/, 'api.github.com/repos')
+      response = fetch(uri)
+      response = fetch_github(gem, response['url']) if response['message'] == 'Moved Permanently'
+      response
+    end
+
+    # rubocop:disable Metrics/MethodLength
+    def fetch(uri)
+      failed = []
       client = HTTPClient.new
-      request = client.get(rubygems_api(gem.name))
+      request = client.get(uri)
       begin
         response = JSON.parse(request.body)
       rescue JSON::ParserError
@@ -39,7 +54,7 @@ module Gemat
         return
       end
 
-      print "#{failed.join(',')}: failed fetcing gem info." unless failed.empty?
+      print "#{failed.join(',')}: failed fetcing info." unless failed.empty?
       response
     end
     # rubocop:enable Metrics/MethodLength

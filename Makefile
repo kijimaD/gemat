@@ -10,10 +10,13 @@ build:
 	rake install
 publish:
 	rake release
-re:
+run:
 	make build
-	gemat md
+	gemat md --all t
 check:
 	make test
 	make lint
-	make re
+	make run
+all_options:
+	gemat csv --input ./Gemfile --output test.csv --columns index repo_uri name documentation_uri gem_uri version authors description
+	gemat md --all -t

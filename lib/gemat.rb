@@ -22,7 +22,7 @@ module Gemat
   class Gemat
     def self.run(options = {}, &block)
       dsl = InDsl.new(options[:input])
-      outdsls = OutDsl.create(options[:columns])
+      outdsls = OutDsl.create(options[:columns], all: options[:all])
       fetcher = Fetcher.new(dsl)
       fetcher.run
       block.call(fetcher.gems, outdsls)

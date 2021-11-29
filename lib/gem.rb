@@ -2,18 +2,18 @@
 
 module Gemat
   class Gem
-    attr_accessor :index, :response
+    attr_accessor :index, :rubygems, :github
 
-    def initialize(response)
-      @response = response
+    def initialize(rubygems)
+      @rubygems = rubygems
       @index = 0
     end
 
     def repo_uri
-      match = github_uri_match([@response.dig('metadata', 'homepage_uri'),
-                                @response['homepage_uri'],
-                                @response['bug_tracker_uri'],
-                                @response['source_code_uri']])
+      match = github_uri_match([@rubygems.dig('metadata', 'homepage_uri'),
+                                @rubygems['homepage_uri'],
+                                @rubygems['bug_tracker_uri'],
+                                @rubygems['source_code_uri']])
       return if match.nil?
 
       user = match[1]
@@ -24,7 +24,7 @@ module Gemat
     private
 
     def github_uri_match(uris)
-      reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
+      reg = %r{github.com/([\w\-]+)/([\w\-]+)}
       uris.each do |uri|
         return reg.match(uri) if reg.match(uri)
       end

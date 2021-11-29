@@ -49,6 +49,7 @@ $ gemat md  # export to markdown
 $ gemat csv --input ~/path/to/Gemfile # specify gemfile
 $ gemat csv --output test.csv         # specify writing file
 $ gemat csv --columns index repo_uri name documentation_uri gem_uri version authors # specify printing column
+$ gemat md --all t # select all column
 ```
 
 ## Development
