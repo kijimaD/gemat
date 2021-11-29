@@ -8,13 +8,18 @@ Gemat is a Ruby gem for curating and exporing Gemfile to several formats!
 ```shell
 $ gemat md
 
-| index | name | repo_url |
-| ---- | ---- | ---- |
-| 0 | httpclient | https://github.com/nahi/httpclient |
-| 1 | rake | https://github.com/ruby/rake |
-| 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar |
-| 3 | thor | https://github.com/erikhuda/thor |
+| index | name | repo_uri | documentation_uri |
+| ---- | ---- | ---- | ---- |
+| 0 | httpclient | https://github.com/nahi/httpclient | https://www.rubydoc.info/gems/httpclient/2.8.3 |
+| 1 | rake | https://github.com/ruby/rake | https://ruby.github.io/rake |
+| 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar | https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0 |
 ```
+
+| index | name | repo_uri | documentation_uri |
+| ---- | ---- | ---- | ---- |
+| 0 | httpclient | https://github.com/nahi/httpclient | https://www.rubydoc.info/gems/httpclient/2.8.3 |
+| 1 | rake | https://github.com/ruby/rake | https://ruby.github.io/rake |
+| 2 | ruby-progressbar | https://github.com/jfelchner/ruby-progressbar | https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0 |
 
 ## Installation
 
@@ -36,12 +41,12 @@ Or install it yourself as:
 # at your bundled project...
 
 $ gemat csv # export to CSV
-$ gemat md # export to markdown
+$ gemat md  # export to markdown
 
 # optional arguments
 $ gemat csv --input ~/path/to/Gemfile # specify gemfile
 $ gemat csv --output test.csv         # specify writing file
-$ gemat csv --columns name repo_url # specify need column, order
+$ gemat csv --columns index repo_uri name documentation_uri gem_uri version authors # specify printing column
 ```
 
 ## Development
