@@ -5,11 +5,11 @@ require_relative 'lib/gemat/version'
 Gem::Specification.new do |spec|
   spec.name          = 'gemat'
   spec.version       = Gemat::VERSION
-  spec.authors       = ['kijimaD']
+  spec.authors       = ['Kijima Daigo']
   spec.email         = ['norimaking777@gmail.com']
 
-  spec.summary       = 'Export Gemfile several formats.'
-  spec.description   = 'Export Gemfile several formats. CSV, Markdown etc.'
+  spec.summary       = 'Gemat is a Ruby gem for curating and exporing Gemfile to several formats!'
+  spec.description   = 'Gemat is a Ruby gem for curating and exporing Gemfile to several formats!'
   spec.homepage      = 'https://github.com/kijimaD/gemat'
   spec.license       = 'GPL3'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
