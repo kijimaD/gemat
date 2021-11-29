@@ -6,12 +6,31 @@ module Gemat
     NAME = 'name'
     REPO_URI = 'repo_uri'
     GEM_URI = 'gem_uri'
+
     DOC_URI = 'documentation_uri'
     LATEST_VERSION = 'version'
     AUTHORS = 'authors'
+
+    DESCRIPTION = 'description'
+    CREATED_AT = 'created_at'
+    UPDATED_AT = 'updated_at'
+    SIZE = 'size'
+    STAR = 'stargazers_count'
+    WATCH = 'watchers_count'
+    FORKS = 'forks'
+    LANGUAGE = 'language'
+    ARCHIVED = 'archived'
+    DISABLED = 'disabled'
+    OPEN_ISSUES_COUNT = 'open_issues_count'
+    NETWORK_COUNT = 'network_count'
+    SUBSCRIBERS = 'subscribers_count'
+
     DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI].freeze
 
-    RESPONSE_SOURCES = [NAME, DOC_URI, GEM_URI, LATEST_VERSION, AUTHORS].freeze
+    RUBYGEMS_RESPONSE_SOURCES = [NAME, DOC_URI, GEM_URI, LATEST_VERSION, AUTHORS].freeze
+    GITHUB_RESPONSE_SOURCES = [DESCRIPTION, CREATED_AT, UPDATED_AT, SIZE, STAR, WATCH,
+                               FORKS, LANGUAGE, ARCHIVED, DISABLED, OPEN_ISSUES_COUNT,
+                               NETWORK_COUNT, SUBSCRIBERS].freeze
     GEM_SOURCES = [INDEX, REPO_URI].freeze
 
     attr_accessor :column_name
@@ -20,9 +39,11 @@ module Gemat
       columns.map { |column| new(column) }
     end
 
-    def self.create(columns)
+    def self.create(columns, all: nil)
       if columns
         new_by_array(columns)
+      elsif all
+        new_by_array([].concat(GEM_SOURCES, RUBYGEMS_RESPONSE_SOURCES, GITHUB_RESPONSE_SOURCES))
       else
         new_by_array(DEFAULT_COLUMNS)
       end
@@ -41,8 +62,10 @@ module Gemat
     # rubocop:disable Metrics/MethodLength
     def set_lambda
       case @column_name
-      when *RESPONSE_SOURCES
+      when *RUBYGEMS_RESPONSE_SOURCES
         @lambda = rubygems_response(@column_name)
+      when *GITHUB_RESPONSE_SOURCES
+        @lambda = github_response(@column_name)
       when *GEM_SOURCES
         @lambda = gem_method(@column_name)
       else
@@ -57,6 +80,10 @@ module Gemat
 
     def rubygems_response(column)
       ->(gem) { gem.response[column] }
+    end
+
+    def github_response(column)
+      ->(gem) { gem.github[column] }
     end
 
     def gem_method(column)
