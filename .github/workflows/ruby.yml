@@ -20,6 +20,7 @@ jobs:
       run: make cov
       env:
         COVERAGE: true
+        THOR_SILENCE_DEPRECATION: true
     - name: Upload coverage results
       uses: actions/upload-artifact@master
       with:
