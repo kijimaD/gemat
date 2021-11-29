@@ -2,19 +2,15 @@
 
 module Gemat
   class Gem
-    attr_accessor :index
+    attr_accessor :index, :response
 
     def initialize(response)
       @response = response
       @index = 0
     end
 
-    def name
-      @response['name']
-    end
-
-    def repo_url
-      match = github_url_match([@response.dig('metadata', 'homepage_uri'),
+    def repo_uri
+      match = github_uri_match([@response.dig('metadata', 'homepage_uri'),
                                 @response['homepage_uri'],
                                 @response['bug_tracker_uri'],
                                 @response['source_code_uri']])
@@ -27,10 +23,10 @@ module Gemat
 
     private
 
-    def github_url_match(urls)
+    def github_uri_match(uris)
       reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
-      urls.each do |url|
-        return reg.match(url) if reg.match(url)
+      uris.each do |uri|
+        return reg.match(uri) if reg.match(uri)
       end
     end
   end

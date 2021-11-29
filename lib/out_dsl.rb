@@ -4,8 +4,15 @@ module Gemat
   class OutDsl
     INDEX = 'index'
     NAME = 'name'
-    REPO_URL = 'repo_url'
-    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL].freeze
+    REPO_URI = 'repo_uri'
+    GEM_URI = 'gem_uri'
+    DOC_URI = 'documentation_uri'
+    LATEST_VERSION = 'version'
+    AUTHORS = 'authors'
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI].freeze
+
+    RESPONSE_SOURCES = [NAME, DOC_URI, GEM_URI, LATEST_VERSION, AUTHORS].freeze
+    GEM_SOURCES = [INDEX, REPO_URI].freeze
 
     attr_accessor :column_name
 
@@ -31,27 +38,29 @@ module Gemat
       @lambda.call(gem)
     end
 
+    # rubocop:disable Metrics/MethodLength
     def set_lambda
       case @column_name
-      when NAME
-        @lambda = name
-      when REPO_URL
-        @lambda = repo_url
-      when INDEX
-        @lambda = index
+      when *RESPONSE_SOURCES
+        @lambda = rubygems_response(@column_name)
+      when *GEM_SOURCES
+        @lambda = gem_method(@column_name)
+      else
+        msg = <<-ERROR.gsub(/^\s+/, '')
+          Contain invalid column name `#{@column_name}`!
+          valid columns hint: [#{GEM_SOURCES.join(', ')}, #{RESPONSE_SOURCES.join(', ')}]
+        ERROR
+        raise StandardError, msg
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
-    def name
-      ->(gem) { gem.name }
+    def rubygems_response(column)
+      ->(gem) { gem.response[column] }
     end
 
-    def repo_url
-      ->(gem) { gem.repo_url }
-    end
-
-    def index
-      ->(gem) { gem.index }
+    def gem_method(column)
+      ->(gem) { gem.send(column) }
     end
   end
 end

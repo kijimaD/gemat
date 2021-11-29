@@ -12,10 +12,10 @@ module Gemat
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
       @dsl.dependencies.each_with_index do |gem, idx|
-        sleep 0.1
         pb.increment
 
         response = fetch(gem)
+        sleep 0.2
         next unless response
 
         gem = Gem.new(response)
@@ -26,18 +26,23 @@ module Gemat
 
     private
 
+    # rubocop:disable Metrics/MethodLength
     def fetch(gem)
+      failed = []
+
       client = HTTPClient.new
       request = client.get(rubygems_api(gem.name))
       begin
         response = JSON.parse(request.body)
       rescue JSON::ParserError
-        print "\n#{gem.name} is not found on Rubygems..."
+        failed << gem.name
         return
       end
-      # puts JSON.pretty_generate(response)
+
+      print "#{failed.join(',')}: failed fetcing gem info." unless failed.empty?
       response
     end
+    # rubocop:enable Metrics/MethodLength
 
     def rubygems_api(name)
       "https://rubygems.org/api/v1/gems/#{name}.json"
