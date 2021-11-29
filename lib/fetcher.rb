@@ -24,8 +24,8 @@ module Gemat
 
     private
 
-    def create_gem(response, idx)
-      gem = Gem.new(response)
+    def create_gem(rubygems, idx)
+      gem = Gem.new(rubygems)
       gem.github = fetch_github(gem)
       gem.index = idx
       @gems << gem

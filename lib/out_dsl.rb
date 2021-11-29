@@ -83,7 +83,7 @@ module Gemat
     # rubocop:enable Metrics/MethodLength
 
     def rubygems_response(column)
-      ->(gem) { gem.response[column] }
+      ->(gem) { gem.rubygems[column] }
     end
 
     def github_response(column)
