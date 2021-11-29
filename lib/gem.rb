@@ -24,7 +24,7 @@ module Gemat
     private
 
     def github_uri_match(uris)
-      reg = %r{https://github.com/([\w\-]+)/([\w\-]+)}
+      reg = %r{github.com/([\w\-]+)/([\w\-]+)}
       uris.each do |uri|
         return reg.match(uri) if reg.match(uri)
       end
