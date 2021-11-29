@@ -38,6 +38,7 @@ module Gemat
       @lambda.call(gem)
     end
 
+    # rubocop:disable Metrics/MethodLength
     def set_lambda
       case @column_name
       when *RESPONSE_SOURCES
@@ -45,9 +46,14 @@ module Gemat
       when *GEM_SOURCES
         @lambda = gem_method(@column_name)
       else
-        raise StandardError, "Contain invalid column name `#{@column_name}`!"
+        msg = <<-ERROR.gsub(/^\s+/, '')
+          Contain invalid column name `#{@column_name}`!
+          valid columns hint: [#{GEM_SOURCES.join(', ')}, #{RESPONSE_SOURCES.join(', ')}]
+        ERROR
+        raise StandardError, msg
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     def rubygems_response(column)
       ->(gem) { gem.response[column] }
