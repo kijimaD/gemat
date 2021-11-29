@@ -31,7 +31,7 @@ jobs:
     - name: Test run
       run: gemat csv --output test.csv --columns index name
     - name: Test run
-      run: gemat md
+      run: gemat md --all t
 
   rubocop:
     runs-on: ubuntu-latest
