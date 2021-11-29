@@ -4,12 +4,12 @@ module Gemat
   class OutDsl
     INDEX = 'index'
     NAME = 'name'
-    REPO_URL = 'repo_url'
-    GEM_URL = 'gem_url'
-    DOC_URL = 'doc_url'
-    LATEST_VERSION = 'latest_version'
-    AUTHOR = 'author'
-    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URL, DOC_URL].freeze
+    REPO_URI = 'repo_uri'
+    GEM_URI = 'gem_uri'
+    DOC_URI = 'documentation_uri'
+    LATEST_VERSION = 'version'
+    AUTHORS = 'authors'
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI].freeze
 
     attr_accessor :column_name
 
@@ -35,51 +35,39 @@ module Gemat
       @lambda.call(gem)
     end
 
+    # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     def set_lambda
       case @column_name
       when NAME
-        @lambda = name
-      when REPO_URL
-        @lambda = repo_url
+        @lambda = rubygems_response(NAME)
+      when REPO_URI
+        @lambda = repo_uri
       when INDEX
         @lambda = index
-      when DOC_URL
-        @lambda = doc_url
-      when GEM_URL
-        @lambda = gem_url
+      when DOC_URI
+        @lambda = rubygems_response(DOC_URI)
+      when GEM_URI
+        @lambda = rubygems_response(GEM_URI)
       when LATEST_VERSION
-        @lambda = latest_version
-      when AUTHOR
-        @lambda = author
+        @lambda = rubygems_response(LATEST_VERSION)
+      when AUTHORS
+        @lambda = rubygems_response(AUTHORS)
+      else
+        raise StandardError.new('Contain invalid column name!')
       end
     end
+    # rubocop:enable Metrics/MethodLength, Metrics/CyclomaticComplexity
 
-    def name
-      ->(gem) { gem.response['name'] }
+    def rubygems_response(column)
+      ->(gem) { gem.response[column] }
     end
 
     def index
       ->(gem) { gem.index }
     end
 
-    def repo_url
-      ->(gem) { gem.repo_url }
-    end
-
-    def doc_url
-      ->(gem) { gem.response['documentation_uri'] }
-    end
-
-    def gem_url
-      ->(gem) { gem.response['gem_uri'] }
-    end
-
-    def latest_version
-      ->(gem) { gem.response['version'] }
-    end
-
-    def author
-      ->(gem) { gem.response['authors'] }
+    def repo_uri
+      ->(gem) { gem.repo_uri }
     end
   end
 end

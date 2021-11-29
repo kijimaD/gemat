@@ -11,7 +11,7 @@ RSpec.describe Gemat::Fetcher do
 
         dsl = described_class.new(dsl_mock)
         dsl.run
-        expect(dsl.gems.first).to have_attributes('repo_url': 'https://github.com/vcr/vcr')
+        expect(dsl.gems.first).to have_attributes('repo_uri': 'https://github.com/vcr/vcr')
       end
     end
   end
