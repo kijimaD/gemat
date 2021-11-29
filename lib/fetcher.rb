@@ -31,12 +31,22 @@ module Gemat
       @gems << gem
     end
 
-    # rubocop:disable Metrics/MethodLength
     def fetch_rubygems(gem)
-      failed = []
+      fetch(rubygems_api(gem.name))
+    end
 
+    def fetch_github(gem, uri = nil)
+      uri ||= gem.repo_uri.gsub(/github.com/, 'api.github.com/repos')
+      response = fetch(uri)
+      response = fetch_github(gem, response['url']) if response['message'] == 'Moved Permanently'
+      response
+    end
+
+    # rubocop:disable Metrics/MethodLength
+    def fetch(uri)
+      failed = []
       client = HTTPClient.new
-      request = client.get(rubygems_api(gem.name))
+      request = client.get(uri)
       begin
         response = JSON.parse(request.body)
       rescue JSON::ParserError
@@ -44,24 +54,10 @@ module Gemat
         return
       end
 
-      print "#{failed.join(',')}: failed fetcing gem info." unless failed.empty?
+      print "#{failed.join(',')}: failed fetcing info." unless failed.empty?
       response
     end
     # rubocop:enable Metrics/MethodLength
-
-    def fetch_github(gem, uri = nil)
-      uri ||= gem.repo_uri.gsub(/github.com/, 'api.github.com/repos')
-      client = HTTPClient.new
-      request = client.get(uri)
-      begin
-        response = JSON.parse(request.body)
-        response = fetch_github(gem, response['url']) if response['message'] == 'Moved Permanently'
-      rescue JSON::ParserError
-        return
-      end
-
-      response
-    end
 
     def rubygems_api(name)
       "https://rubygems.org/api/v1/gems/#{name}.json"
