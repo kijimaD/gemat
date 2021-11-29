@@ -2,15 +2,18 @@
 
 module Gemat
   class OutDsl
+    # gem
     INDEX = 'index'
     NAME = 'name'
     REPO_URI = 'repo_uri'
     GEM_URI = 'gem_uri'
 
+    # Rubygems
     DOC_URI = 'documentation_uri'
     LATEST_VERSION = 'version'
     AUTHORS = 'authors'
 
+    # GitHub
     DESCRIPTION = 'description'
     CREATED_AT = 'created_at'
     UPDATED_AT = 'updated_at'
@@ -25,13 +28,14 @@ module Gemat
     NETWORK_COUNT = 'network_count'
     SUBSCRIBERS = 'subscribers_count'
 
-    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI].freeze
+    DEFAULT_COLUMNS = [INDEX, NAME, REPO_URI, DOC_URI, SIZE, STAR, CREATED_AT, UPDATED_AT].freeze
 
     RUBYGEMS_RESPONSE_SOURCES = [NAME, DOC_URI, GEM_URI, LATEST_VERSION, AUTHORS].freeze
     GITHUB_RESPONSE_SOURCES = [DESCRIPTION, CREATED_AT, UPDATED_AT, SIZE, STAR, WATCH,
                                FORKS, LANGUAGE, ARCHIVED, DISABLED, OPEN_ISSUES_COUNT,
                                NETWORK_COUNT, SUBSCRIBERS].freeze
     GEM_SOURCES = [INDEX, REPO_URI].freeze
+    ALL_SOURCES = [].concat(GEM_SOURCES, RUBYGEMS_RESPONSE_SOURCES, GITHUB_RESPONSE_SOURCES).freeze
 
     attr_accessor :column_name
 
@@ -43,7 +47,7 @@ module Gemat
       if columns
         new_by_array(columns)
       elsif all
-        new_by_array([].concat(GEM_SOURCES, RUBYGEMS_RESPONSE_SOURCES, GITHUB_RESPONSE_SOURCES))
+        new_by_array(ALL_SOURCES)
       else
         new_by_array(DEFAULT_COLUMNS)
       end
@@ -71,7 +75,7 @@ module Gemat
       else
         msg = <<-ERROR.gsub(/^\s+/, '')
           Contain invalid column name `#{@column_name}`!
-          valid columns hint: [#{GEM_SOURCES.join(', ')}, #{RESPONSE_SOURCES.join(', ')}]
+          valid columns hint: [#{ALL_SOURCES}]
         ERROR
         raise StandardError, msg
       end
