@@ -53,7 +53,7 @@ module Gemat
       when AUTHORS
         @lambda = rubygems_response(AUTHORS)
       else
-        raise StandardError.new('Contain invalid column name!')
+        raise StandardError, "Contain invalid column name `#{@column_name}`!"
       end
     end
     # rubocop:enable Metrics/MethodLength, Metrics/CyclomaticComplexity
