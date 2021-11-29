@@ -11,21 +11,25 @@ module Gemat
 
     def run
       pb = ProgressBar.create(total: @dsl.dependencies.length)
-      @dsl.dependencies.each_with_index do |gem, idx|
+      @dsl.dependencies.each_with_index do |dependency, idx|
         pb.increment
 
-        response = fetch_rubygems(gem)
-        sleep 0.2
+        response = fetch_rubygems(dependency)
         next unless response
 
-        gem = Gem.new(response)
-        gem.github = fetch_github(gem)
-        gem.index = idx
-        @gems << gem
+        create_gem(response, idx)
+        sleep 0.2
       end
     end
 
     private
+
+    def create_gem(response, idx)
+      gem = Gem.new(response)
+      gem.github = fetch_github(gem)
+      gem.index = idx
+      @gems << gem
+    end
 
     # rubocop:disable Metrics/MethodLength
     def fetch_rubygems(gem)

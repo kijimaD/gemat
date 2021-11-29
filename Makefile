@@ -12,7 +12,7 @@ publish:
 	rake release
 re:
 	make build
-	gemat md
+	gemat md --all t
 check:
 	make test
 	make lint
