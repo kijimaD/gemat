@@ -2,7 +2,7 @@
 
 module Gemat
   class Gem
-    attr_accessor :index, :response
+    attr_accessor :index, :response, :github
 
     def initialize(response)
       @response = response
