@@ -9,9 +9,8 @@ RSpec.describe Gemat::OrgFormatter do
           fetcher = Gemat::Fetcher.new(indsl)
           fetcher.run
 
-          outdsl = Gemat::OutDsl.create(['index', 'name'])
-
-          formatter = described_class.new(fetcher.gems, outdsl)
+          outdsl = Gemat::OutDsl.create(%w[index name])
+          described_class.new(fetcher.gems, outdsl)
         end
       end
     end
