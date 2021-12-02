@@ -2,15 +2,20 @@
 
 module Gemat
   class Cli < Thor
+    class_options input: :string, output: :string, columns: :array, all: :boolean
+
     desc 'csv', 'export Gemfile to CSV file'
-    method_options input: :string, output: :string, columns: :array, all: :boolean
     def csv
       command(options, __method__)
     end
 
     desc 'md', 'export Gemfile to markdown'
-    method_options input: :string, output: :string, columns: :array, all: :boolean
     def md
+      command(options, __method__)
+    end
+
+    desc 'org', 'export Gemfile to org'
+    def org
       command(options, __method__)
     end
 

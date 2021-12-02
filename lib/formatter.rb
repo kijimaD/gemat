@@ -7,6 +7,7 @@ module Gemat
       @columns = columns
       @write_path = write_path
       @rows = []
+      set_column_name_length
       gen_rows
     end
 
@@ -30,5 +31,19 @@ module Gemat
         proc.call("\n")
       end
     end
+
+    # rubocop:disable Metrics/AbcSize
+    def set_column_name_length
+      rows = []
+      rows << @columns.map(&:column_name)
+      @gems.each do |gem|
+        rows << @columns.map { |dsl| dsl.call(gem) }
+      end
+      maxes = rows.transpose.map { |row| row.max { |a, b| a.to_s.length <=> b.to_s.length }.to_s.length }
+      maxes.zip(@columns) do |max, column|
+        column.max_length = max
+      end
+    end
+    # rubocop:enable Metrics/AbcSize
   end
 end
