@@ -37,7 +37,7 @@ module Gemat
     GEM_SOURCES = [INDEX, REPO_URI].freeze
     ALL_SOURCES = [].concat(GEM_SOURCES, RUBYGEMS_RESPONSE_SOURCES, GITHUB_RESPONSE_SOURCES).freeze
 
-    attr_accessor :column_name
+    attr_accessor :column_name, :max_length
 
     def self.new_by_array(columns)
       columns.map { |column| new(column) }
