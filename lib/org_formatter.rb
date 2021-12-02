@@ -6,9 +6,9 @@ module Gemat
 
     def gen_rows
       @rows << "| #{@columns.map { |column| column.column_name.ljust(column.max_length) }.join(' | ')} |"
-      @rows << "| #{Array.new(@columns.length, '----').join(' + ')} |"
+      @rows << "|#{@columns.map { |column| '-' * (column.max_length + 2) }.join('+')}|"
       @gems.each do |gem|
-        @rows << "| #{@columns.map { |dsl| dsl.call(gem) }.join(' | ')} |"
+        @rows << "| #{@columns.map { |column| column.call(gem).to_s.ljust(column.max_length) }.join(' | ')} |"
       end
     end
   end
