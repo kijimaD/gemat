@@ -44,6 +44,7 @@ Or install it yourself as:
 
 $ gemat csv # export to CSV
 $ gemat md  # export to markdown
+$ gemat org # export to org
 
 # optional arguments
 $ gemat csv --input ~/path/to/Gemfile # specify gemfile
