@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:34 GMT
+      - Mon, 29 Nov 2021 23:49:12 GMT
   response:
     status:
       code: 200
@@ -43,41 +43,41 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a3bc0ef-e976-43f6-8f39-466a9f185353
+      - 888359e4-a9e3-40e9-8f64-d90f0b9faaa4
       X-Runtime:
-      - '0.015258'
+      - '0.021180'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 52.88.209.40:443
+      - F_Rails 44.239.42.136:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:35 GMT
+      - Mon, 29 Nov 2021 23:49:12 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18724-HND
+      - cache-tyo11977-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186755.998469,VS0,VE144
+      - S1638229753.576666,VS0,VE151
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"7b263cf6064afe064179776b20617d11"'
+      - '"74ea15dbd825747da30d17aeb371c16c"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"httpclient","downloads":175102246,"version":"2.8.3","version_created_at":"2016-12-09T05:58:57.436Z","version_downloads":141080180,"platform":"ruby","authors":"Hiroshi
+      string: '{"name":"httpclient","downloads":175212778,"version":"2.8.3","version_created_at":"2016-12-09T05:58:57.436Z","version_downloads":141187887,"platform":"ruby","authors":"Hiroshi
         Nakamura","info":"gives something like the functionality of libwww-perl (LWP)
         in Ruby","licenses":["ruby"],"metadata":{},"yanked":false,"sha":"2951e4991214464c3e92107e46438527d23048e634f3aee91c719e0bdfaebda6","project_uri":"https://rubygems.org/gems/httpclient","gem_uri":"https://rubygems.org/gems/httpclient-2.8.3.gem","homepage_uri":"https://github.com/nahi/httpclient","wiki_uri":null,"documentation_uri":"https://www.rubydoc.info/gems/httpclient/2.8.3","mailing_list_uri":null,"source_code_uri":null,"bug_tracker_uri":null,"changelog_uri":null,"funding_uri":null,"dependencies":{"development":[],"runtime":[]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:35 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:12 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/nahi/httpclient
@@ -90,7 +90,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:35 GMT
+      - Mon, 29 Nov 2021 23:49:12 GMT
   response:
     status:
       code: 200
@@ -99,7 +99,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:35 GMT
+      - Mon, 29 Nov 2021 23:49:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -134,24 +134,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '30'
+      - '48'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '30'
+      - '12'
       Accept-Ranges:
       - bytes
       Content-Length:
       - '4820'
       X-Github-Request-Id:
-      - CCFC:5BDF:D1554:134CD3:61A4BF03
+      - D9A0:7B87:4272D1:4B2384:61A566F8
     body:
       encoding: UTF-8
       string: '{"id":354875,"node_id":"MDEwOlJlcG9zaXRvcnkzNTQ4NzU=","name":"httpclient","full_name":"nahi/httpclient","private":false,"owner":{"login":"nahi","id":44209,"node_id":"MDQ6VXNlcjQ0MjA5","avatar_url":"https://avatars.githubusercontent.com/u/44209?v=4","gravatar_id":"","url":"https://api.github.com/users/nahi","html_url":"https://github.com/nahi","followers_url":"https://api.github.com/users/nahi/followers","following_url":"https://api.github.com/users/nahi/following{/other_user}","gists_url":"https://api.github.com/users/nahi/gists{/gist_id}","starred_url":"https://api.github.com/users/nahi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nahi/subscriptions","organizations_url":"https://api.github.com/users/nahi/orgs","repos_url":"https://api.github.com/users/nahi/repos","events_url":"https://api.github.com/users/nahi/events{/privacy}","received_events_url":"https://api.github.com/users/nahi/received_events","type":"User","site_admin":false},"html_url":"https://github.com/nahi/httpclient","description":"''httpclient''
-        gives something like the functionality of libwww-perl (LWP) in Ruby.","fork":false,"url":"https://api.github.com/repos/nahi/httpclient","forks_url":"https://api.github.com/repos/nahi/httpclient/forks","keys_url":"https://api.github.com/repos/nahi/httpclient/keys{/key_id}","collaborators_url":"https://api.github.com/repos/nahi/httpclient/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/nahi/httpclient/teams","hooks_url":"https://api.github.com/repos/nahi/httpclient/hooks","issue_events_url":"https://api.github.com/repos/nahi/httpclient/issues/events{/number}","events_url":"https://api.github.com/repos/nahi/httpclient/events","assignees_url":"https://api.github.com/repos/nahi/httpclient/assignees{/user}","branches_url":"https://api.github.com/repos/nahi/httpclient/branches{/branch}","tags_url":"https://api.github.com/repos/nahi/httpclient/tags","blobs_url":"https://api.github.com/repos/nahi/httpclient/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/nahi/httpclient/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/nahi/httpclient/git/refs{/sha}","trees_url":"https://api.github.com/repos/nahi/httpclient/git/trees{/sha}","statuses_url":"https://api.github.com/repos/nahi/httpclient/statuses/{sha}","languages_url":"https://api.github.com/repos/nahi/httpclient/languages","stargazers_url":"https://api.github.com/repos/nahi/httpclient/stargazers","contributors_url":"https://api.github.com/repos/nahi/httpclient/contributors","subscribers_url":"https://api.github.com/repos/nahi/httpclient/subscribers","subscription_url":"https://api.github.com/repos/nahi/httpclient/subscription","commits_url":"https://api.github.com/repos/nahi/httpclient/commits{/sha}","git_commits_url":"https://api.github.com/repos/nahi/httpclient/git/commits{/sha}","comments_url":"https://api.github.com/repos/nahi/httpclient/comments{/number}","issue_comment_url":"https://api.github.com/repos/nahi/httpclient/issues/comments{/number}","contents_url":"https://api.github.com/repos/nahi/httpclient/contents/{+path}","compare_url":"https://api.github.com/repos/nahi/httpclient/compare/{base}...{head}","merges_url":"https://api.github.com/repos/nahi/httpclient/merges","archive_url":"https://api.github.com/repos/nahi/httpclient/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/nahi/httpclient/downloads","issues_url":"https://api.github.com/repos/nahi/httpclient/issues{/number}","pulls_url":"https://api.github.com/repos/nahi/httpclient/pulls{/number}","milestones_url":"https://api.github.com/repos/nahi/httpclient/milestones{/number}","notifications_url":"https://api.github.com/repos/nahi/httpclient/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/nahi/httpclient/labels{/name}","releases_url":"https://api.github.com/repos/nahi/httpclient/releases{/id}","deployments_url":"https://api.github.com/repos/nahi/httpclient/deployments","created_at":"2009-10-30T02:23:41Z","updated_at":"2021-11-17T22:58:12Z","pushed_at":"2021-10-08T17:46:33Z","git_url":"git://github.com/nahi/httpclient.git","ssh_url":"git@github.com:nahi/httpclient.git","clone_url":"https://github.com/nahi/httpclient.git","svn_url":"https://github.com/nahi/httpclient","homepage":"https://github.com/nahi/httpclient","size":2400,"stargazers_count":686,"watchers_count":686,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":281,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":92,"license":null,"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":281,"open_issues":92,"watchers":686,"default_branch":"master","temp_clone_token":null,"network_count":281,"subscribers_count":28}'
-  recorded_at: Mon, 29 Nov 2021 11:52:35 GMT
+        gives something like the functionality of libwww-perl (LWP) in Ruby.","fork":false,"url":"https://api.github.com/repos/nahi/httpclient","forks_url":"https://api.github.com/repos/nahi/httpclient/forks","keys_url":"https://api.github.com/repos/nahi/httpclient/keys{/key_id}","collaborators_url":"https://api.github.com/repos/nahi/httpclient/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/nahi/httpclient/teams","hooks_url":"https://api.github.com/repos/nahi/httpclient/hooks","issue_events_url":"https://api.github.com/repos/nahi/httpclient/issues/events{/number}","events_url":"https://api.github.com/repos/nahi/httpclient/events","assignees_url":"https://api.github.com/repos/nahi/httpclient/assignees{/user}","branches_url":"https://api.github.com/repos/nahi/httpclient/branches{/branch}","tags_url":"https://api.github.com/repos/nahi/httpclient/tags","blobs_url":"https://api.github.com/repos/nahi/httpclient/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/nahi/httpclient/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/nahi/httpclient/git/refs{/sha}","trees_url":"https://api.github.com/repos/nahi/httpclient/git/trees{/sha}","statuses_url":"https://api.github.com/repos/nahi/httpclient/statuses/{sha}","languages_url":"https://api.github.com/repos/nahi/httpclient/languages","stargazers_url":"https://api.github.com/repos/nahi/httpclient/stargazers","contributors_url":"https://api.github.com/repos/nahi/httpclient/contributors","subscribers_url":"https://api.github.com/repos/nahi/httpclient/subscribers","subscription_url":"https://api.github.com/repos/nahi/httpclient/subscription","commits_url":"https://api.github.com/repos/nahi/httpclient/commits{/sha}","git_commits_url":"https://api.github.com/repos/nahi/httpclient/git/commits{/sha}","comments_url":"https://api.github.com/repos/nahi/httpclient/comments{/number}","issue_comment_url":"https://api.github.com/repos/nahi/httpclient/issues/comments{/number}","contents_url":"https://api.github.com/repos/nahi/httpclient/contents/{+path}","compare_url":"https://api.github.com/repos/nahi/httpclient/compare/{base}...{head}","merges_url":"https://api.github.com/repos/nahi/httpclient/merges","archive_url":"https://api.github.com/repos/nahi/httpclient/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/nahi/httpclient/downloads","issues_url":"https://api.github.com/repos/nahi/httpclient/issues{/number}","pulls_url":"https://api.github.com/repos/nahi/httpclient/pulls{/number}","milestones_url":"https://api.github.com/repos/nahi/httpclient/milestones{/number}","notifications_url":"https://api.github.com/repos/nahi/httpclient/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/nahi/httpclient/labels{/name}","releases_url":"https://api.github.com/repos/nahi/httpclient/releases{/id}","deployments_url":"https://api.github.com/repos/nahi/httpclient/deployments","created_at":"2009-10-30T02:23:41Z","updated_at":"2021-11-17T22:58:12Z","pushed_at":"2021-10-08T17:46:33Z","git_url":"git://github.com/nahi/httpclient.git","ssh_url":"git@github.com:nahi/httpclient.git","clone_url":"https://github.com/nahi/httpclient.git","svn_url":"https://github.com/nahi/httpclient","homepage":"https://github.com/nahi/httpclient","size":2400,"stargazers_count":686,"watchers_count":686,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":282,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":92,"license":null,"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":282,"open_issues":92,"watchers":686,"default_branch":"master","temp_clone_token":null,"network_count":282,"subscribers_count":28}'
+  recorded_at: Mon, 29 Nov 2021 23:49:12 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/rake.json
@@ -164,7 +164,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:35 GMT
+      - Mon, 29 Nov 2021 23:49:13 GMT
   response:
     status:
       code: 200
@@ -195,9 +195,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ad4ba478-75c4-4818-b88e-8cd7dff7a7c1
+      - 197fdcd2-394f-448e-8979-ad27c3c20a17
       X-Runtime:
-      - '0.014973'
+      - '0.021151'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
@@ -205,28 +205,28 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:35 GMT
+      - Mon, 29 Nov 2021 23:49:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18749-HND
+      - cache-tyo11954-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186756.654304,VS0,VE142
+      - S1638229753.219585,VS0,VE132
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"7c651e40626c90282e0edb3dee3367a8"'
+      - '"15197bff179c8770676ea33f58f79d59"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"rake","downloads":526806359,"version":"13.0.6","version_created_at":"2021-07-09T02:52:07.753Z","version_downloads":21994427,"platform":"ruby","authors":"Hiroshi
+      string: '{"name":"rake","downloads":527037345,"version":"13.0.6","version_created_at":"2021-07-09T02:52:07.753Z","version_downloads":22124129,"platform":"ruby","authors":"Hiroshi
         SHIBATA, Eric Hodel, Jim Weirich","info":"Rake is a Make-like program implemented
         in Ruby. Tasks and dependencies are\nspecified in standard Ruby syntax.\nRake
         has the following features:\n  * Rakefiles (rake''s version of Makefiles)
@@ -236,7 +236,7 @@ http_interactions:
         to synthesize implicit tasks.\n  * Flexible FileLists that act like arrays
         but know about manipulating file names and paths.\n  * Supports parallel execution
         of tasks.\n","licenses":["MIT"],"metadata":{"changelog_uri":"https://github.com/ruby/rake/blob/v13.0.6/History.rdoc","bug_tracker_uri":"https://github.com/ruby/rake/issues","source_code_uri":"https://github.com/ruby/rake/tree/v13.0.6","documentation_uri":"https://ruby.github.io/rake"},"yanked":false,"sha":"5ce4bf5037b4196c24ac62834d8db1ce175470391026bd9e557d669beeb19097","project_uri":"https://rubygems.org/gems/rake","gem_uri":"https://rubygems.org/gems/rake-13.0.6.gem","homepage_uri":"https://github.com/ruby/rake","wiki_uri":null,"documentation_uri":"https://ruby.github.io/rake","mailing_list_uri":null,"source_code_uri":"https://github.com/ruby/rake/tree/v13.0.6","bug_tracker_uri":"https://github.com/ruby/rake/issues","changelog_uri":"https://github.com/ruby/rake/blob/v13.0.6/History.rdoc","funding_uri":null,"dependencies":{"development":[],"runtime":[]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:35 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:13 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/ruby/rake
@@ -249,7 +249,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:13 GMT
   response:
     status:
       code: 200
@@ -258,7 +258,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -293,25 +293,25 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '29'
+      - '47'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '31'
+      - '13'
       Accept-Ranges:
       - bytes
       Content-Length:
       - '5573'
       X-Github-Request-Id:
-      - CD00:4B32:EB097:14E7D6:61A4BF04
+      - D9A4:55EA:43F7AE:4CAC55:61A566F9
     body:
       encoding: UTF-8
       string: '{"id":20037550,"node_id":"MDEwOlJlcG9zaXRvcnkyMDAzNzU1MA==","name":"rake","full_name":"ruby/rake","private":false,"owner":{"login":"ruby","id":210414,"node_id":"MDEyOk9yZ2FuaXphdGlvbjIxMDQxNA==","avatar_url":"https://avatars.githubusercontent.com/u/210414?v=4","gravatar_id":"","url":"https://api.github.com/users/ruby","html_url":"https://github.com/ruby","followers_url":"https://api.github.com/users/ruby/followers","following_url":"https://api.github.com/users/ruby/following{/other_user}","gists_url":"https://api.github.com/users/ruby/gists{/gist_id}","starred_url":"https://api.github.com/users/ruby/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ruby/subscriptions","organizations_url":"https://api.github.com/users/ruby/orgs","repos_url":"https://api.github.com/users/ruby/repos","events_url":"https://api.github.com/users/ruby/events{/privacy}","received_events_url":"https://api.github.com/users/ruby/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/ruby/rake","description":"A
-        make-like build utility for Ruby.","fork":false,"url":"https://api.github.com/repos/ruby/rake","forks_url":"https://api.github.com/repos/ruby/rake/forks","keys_url":"https://api.github.com/repos/ruby/rake/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ruby/rake/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ruby/rake/teams","hooks_url":"https://api.github.com/repos/ruby/rake/hooks","issue_events_url":"https://api.github.com/repos/ruby/rake/issues/events{/number}","events_url":"https://api.github.com/repos/ruby/rake/events","assignees_url":"https://api.github.com/repos/ruby/rake/assignees{/user}","branches_url":"https://api.github.com/repos/ruby/rake/branches{/branch}","tags_url":"https://api.github.com/repos/ruby/rake/tags","blobs_url":"https://api.github.com/repos/ruby/rake/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ruby/rake/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ruby/rake/git/refs{/sha}","trees_url":"https://api.github.com/repos/ruby/rake/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ruby/rake/statuses/{sha}","languages_url":"https://api.github.com/repos/ruby/rake/languages","stargazers_url":"https://api.github.com/repos/ruby/rake/stargazers","contributors_url":"https://api.github.com/repos/ruby/rake/contributors","subscribers_url":"https://api.github.com/repos/ruby/rake/subscribers","subscription_url":"https://api.github.com/repos/ruby/rake/subscription","commits_url":"https://api.github.com/repos/ruby/rake/commits{/sha}","git_commits_url":"https://api.github.com/repos/ruby/rake/git/commits{/sha}","comments_url":"https://api.github.com/repos/ruby/rake/comments{/number}","issue_comment_url":"https://api.github.com/repos/ruby/rake/issues/comments{/number}","contents_url":"https://api.github.com/repos/ruby/rake/contents/{+path}","compare_url":"https://api.github.com/repos/ruby/rake/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ruby/rake/merges","archive_url":"https://api.github.com/repos/ruby/rake/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ruby/rake/downloads","issues_url":"https://api.github.com/repos/ruby/rake/issues{/number}","pulls_url":"https://api.github.com/repos/ruby/rake/pulls{/number}","milestones_url":"https://api.github.com/repos/ruby/rake/milestones{/number}","notifications_url":"https://api.github.com/repos/ruby/rake/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ruby/rake/labels{/name}","releases_url":"https://api.github.com/repos/ruby/rake/releases{/id}","deployments_url":"https://api.github.com/repos/ruby/rake/deployments","created_at":"2014-05-21T21:11:31Z","updated_at":"2021-11-28T09:10:30Z","pushed_at":"2021-10-27T23:10:27Z","git_url":"git://github.com/ruby/rake.git","ssh_url":"git@github.com:ruby/rake.git","clone_url":"https://github.com/ruby/rake.git","svn_url":"https://github.com/ruby/rake","homepage":"https://ruby.github.io/rake","size":3872,"stargazers_count":2034,"watchers_count":2034,"language":"Ruby","has_issues":true,"has_projects":false,"has_downloads":true,"has_wiki":false,"has_pages":true,"forks_count":598,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":65,"license":{"key":"mit","name":"MIT
-        License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["rake","rakefile","ruby"],"visibility":"public","forks":598,"open_issues":65,"watchers":2034,"default_branch":"master","temp_clone_token":null,"organization":{"login":"ruby","id":210414,"node_id":"MDEyOk9yZ2FuaXphdGlvbjIxMDQxNA==","avatar_url":"https://avatars.githubusercontent.com/u/210414?v=4","gravatar_id":"","url":"https://api.github.com/users/ruby","html_url":"https://github.com/ruby","followers_url":"https://api.github.com/users/ruby/followers","following_url":"https://api.github.com/users/ruby/following{/other_user}","gists_url":"https://api.github.com/users/ruby/gists{/gist_id}","starred_url":"https://api.github.com/users/ruby/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ruby/subscriptions","organizations_url":"https://api.github.com/users/ruby/orgs","repos_url":"https://api.github.com/users/ruby/repos","events_url":"https://api.github.com/users/ruby/events{/privacy}","received_events_url":"https://api.github.com/users/ruby/received_events","type":"Organization","site_admin":false},"network_count":598,"subscribers_count":91}'
-  recorded_at: Mon, 29 Nov 2021 11:52:36 GMT
+        make-like build utility for Ruby.","fork":false,"url":"https://api.github.com/repos/ruby/rake","forks_url":"https://api.github.com/repos/ruby/rake/forks","keys_url":"https://api.github.com/repos/ruby/rake/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ruby/rake/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ruby/rake/teams","hooks_url":"https://api.github.com/repos/ruby/rake/hooks","issue_events_url":"https://api.github.com/repos/ruby/rake/issues/events{/number}","events_url":"https://api.github.com/repos/ruby/rake/events","assignees_url":"https://api.github.com/repos/ruby/rake/assignees{/user}","branches_url":"https://api.github.com/repos/ruby/rake/branches{/branch}","tags_url":"https://api.github.com/repos/ruby/rake/tags","blobs_url":"https://api.github.com/repos/ruby/rake/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ruby/rake/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ruby/rake/git/refs{/sha}","trees_url":"https://api.github.com/repos/ruby/rake/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ruby/rake/statuses/{sha}","languages_url":"https://api.github.com/repos/ruby/rake/languages","stargazers_url":"https://api.github.com/repos/ruby/rake/stargazers","contributors_url":"https://api.github.com/repos/ruby/rake/contributors","subscribers_url":"https://api.github.com/repos/ruby/rake/subscribers","subscription_url":"https://api.github.com/repos/ruby/rake/subscription","commits_url":"https://api.github.com/repos/ruby/rake/commits{/sha}","git_commits_url":"https://api.github.com/repos/ruby/rake/git/commits{/sha}","comments_url":"https://api.github.com/repos/ruby/rake/comments{/number}","issue_comment_url":"https://api.github.com/repos/ruby/rake/issues/comments{/number}","contents_url":"https://api.github.com/repos/ruby/rake/contents/{+path}","compare_url":"https://api.github.com/repos/ruby/rake/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ruby/rake/merges","archive_url":"https://api.github.com/repos/ruby/rake/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ruby/rake/downloads","issues_url":"https://api.github.com/repos/ruby/rake/issues{/number}","pulls_url":"https://api.github.com/repos/ruby/rake/pulls{/number}","milestones_url":"https://api.github.com/repos/ruby/rake/milestones{/number}","notifications_url":"https://api.github.com/repos/ruby/rake/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ruby/rake/labels{/name}","releases_url":"https://api.github.com/repos/ruby/rake/releases{/id}","deployments_url":"https://api.github.com/repos/ruby/rake/deployments","created_at":"2014-05-21T21:11:31Z","updated_at":"2021-11-28T09:10:30Z","pushed_at":"2021-10-27T23:10:27Z","git_url":"git://github.com/ruby/rake.git","ssh_url":"git@github.com:ruby/rake.git","clone_url":"https://github.com/ruby/rake.git","svn_url":"https://github.com/ruby/rake","homepage":"https://ruby.github.io/rake","size":3872,"stargazers_count":2034,"watchers_count":2034,"language":"Ruby","has_issues":true,"has_projects":false,"has_downloads":true,"has_wiki":false,"has_pages":true,"forks_count":599,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":65,"license":{"key":"mit","name":"MIT
+        License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["rake","rakefile","ruby"],"visibility":"public","forks":599,"open_issues":65,"watchers":2034,"default_branch":"master","temp_clone_token":null,"organization":{"login":"ruby","id":210414,"node_id":"MDEyOk9yZ2FuaXphdGlvbjIxMDQxNA==","avatar_url":"https://avatars.githubusercontent.com/u/210414?v=4","gravatar_id":"","url":"https://api.github.com/users/ruby","html_url":"https://github.com/ruby","followers_url":"https://api.github.com/users/ruby/followers","following_url":"https://api.github.com/users/ruby/following{/other_user}","gists_url":"https://api.github.com/users/ruby/gists{/gist_id}","starred_url":"https://api.github.com/users/ruby/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ruby/subscriptions","organizations_url":"https://api.github.com/users/ruby/orgs","repos_url":"https://api.github.com/users/ruby/repos","events_url":"https://api.github.com/users/ruby/events{/privacy}","received_events_url":"https://api.github.com/users/ruby/received_events","type":"Organization","site_admin":false},"network_count":599,"subscribers_count":91}'
+  recorded_at: Mon, 29 Nov 2021 23:49:13 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/ruby-progressbar.json
@@ -324,7 +324,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:13 GMT
   response:
     status:
       code: 200
@@ -355,9 +355,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec5ac645-ea8f-4621-b38f-0038dea0da7e
+      - 40128ca0-4623-40cf-bcfd-5dff1fe04ceb
       X-Runtime:
-      - '0.013481'
+      - '0.020853'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
@@ -365,35 +365,35 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18740-HND
+      - cache-tyo11941-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186756.334203,VS0,VE145
+      - S1638229754.855517,VS0,VE148
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"91a46bc259e7cd67e33cf613bb25c18e"'
+      - '"634d9c0719bb712f5e4e6efe54f1a8d2"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"ruby-progressbar","downloads":207395891,"version":"1.11.0","version_created_at":"2020-12-31T03:01:41.672Z","version_downloads":37592173,"platform":"ruby","authors":"thekompanee,
+      string: '{"name":"ruby-progressbar","downloads":207533263,"version":"1.11.0","version_created_at":"2020-12-31T03:01:41.672Z","version_downloads":37690947,"platform":"ruby","authors":"thekompanee,
         jfelchner","info":"Ruby/ProgressBar is an extremely flexible text progress
         bar library for Ruby. The output can be customized with a flexible formatting
         system including: percentage, bars of various formats, elapsed time and estimated
         time remaining.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/jfelchner/ruby-progressbar/wiki","homepage_uri":"https://github.com/jfelchner/ruby-progressbar","changelog_uri":"https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/jfelchner/ruby-progressbar/issues","source_code_uri":"https://github.com/jfelchner/ruby-progressbar","documentation_uri":"https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0"},"yanked":false,"sha":"cc127db3866dc414ffccbf92928a241e585b3aa2b758a5563e74a6ee0f57d50a","project_uri":"https://rubygems.org/gems/ruby-progressbar","gem_uri":"https://rubygems.org/gems/ruby-progressbar-1.11.0.gem","homepage_uri":"https://github.com/jfelchner/ruby-progressbar","wiki_uri":"https://github.com/jfelchner/ruby-progressbar/wiki","documentation_uri":"https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.11.0","mailing_list_uri":null,"source_code_uri":"https://github.com/jfelchner/ruby-progressbar","bug_tracker_uri":"https://github.com/jfelchner/ruby-progressbar/issues","changelog_uri":"https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"fuubar","requirements":"~\u003e
         2.3"},{"name":"rspec","requirements":"~\u003e 3.7"},{"name":"rspectacular","requirements":"~\u003e
         0.70.6"},{"name":"timecop","requirements":"= 0.6.0"}],"runtime":[]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:36 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:14 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/jfelchner/ruby-progressbar
@@ -406,7 +406,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
   response:
     status:
       code: 200
@@ -415,7 +415,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -450,25 +450,25 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '28'
+      - '46'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '32'
+      - '14'
       Accept-Ranges:
       - bytes
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '5498'
       X-Github-Request-Id:
-      - CD04:5470:31590C:37C053:61A4BF04
+      - D9A8:52A9:1BEFD:226F2:61A566FA
     body:
       encoding: UTF-8
       string: '{"id":130390,"node_id":"MDEwOlJlcG9zaXRvcnkxMzAzOTA=","name":"ruby-progressbar","full_name":"jfelchner/ruby-progressbar","private":false,"owner":{"login":"jfelchner","id":285582,"node_id":"MDQ6VXNlcjI4NTU4Mg==","avatar_url":"https://avatars.githubusercontent.com/u/285582?v=4","gravatar_id":"","url":"https://api.github.com/users/jfelchner","html_url":"https://github.com/jfelchner","followers_url":"https://api.github.com/users/jfelchner/followers","following_url":"https://api.github.com/users/jfelchner/following{/other_user}","gists_url":"https://api.github.com/users/jfelchner/gists{/gist_id}","starred_url":"https://api.github.com/users/jfelchner/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jfelchner/subscriptions","organizations_url":"https://api.github.com/users/jfelchner/orgs","repos_url":"https://api.github.com/users/jfelchner/repos","events_url":"https://api.github.com/users/jfelchner/events{/privacy}","received_events_url":"https://api.github.com/users/jfelchner/received_events","type":"User","site_admin":false},"html_url":"https://github.com/jfelchner/ruby-progressbar","description":"Ruby/ProgressBar
         is a text progress bar library for Ruby.","fork":false,"url":"https://api.github.com/repos/jfelchner/ruby-progressbar","forks_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/forks","keys_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/keys{/key_id}","collaborators_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/teams","hooks_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/hooks","issue_events_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/issues/events{/number}","events_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/events","assignees_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/assignees{/user}","branches_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/branches{/branch}","tags_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/tags","blobs_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/git/refs{/sha}","trees_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/git/trees{/sha}","statuses_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/statuses/{sha}","languages_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/languages","stargazers_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/stargazers","contributors_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/contributors","subscribers_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/subscribers","subscription_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/subscription","commits_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/commits{/sha}","git_commits_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/git/commits{/sha}","comments_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/comments{/number}","issue_comment_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/issues/comments{/number}","contents_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/contents/{+path}","compare_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/compare/{base}...{head}","merges_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/merges","archive_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/downloads","issues_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/issues{/number}","pulls_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/pulls{/number}","milestones_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/milestones{/number}","notifications_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/labels{/name}","releases_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/releases{/id}","deployments_url":"https://api.github.com/repos/jfelchner/ruby-progressbar/deployments","created_at":"2009-02-16T22:06:07Z","updated_at":"2021-11-29T08:18:15Z","pushed_at":"2020-12-31T03:10:37Z","git_url":"git://github.com/jfelchner/ruby-progressbar.git","ssh_url":"git@github.com:jfelchner/ruby-progressbar.git","clone_url":"https://github.com/jfelchner/ruby-progressbar.git","svn_url":"https://github.com/jfelchner/ruby-progressbar","homepage":"","size":1057,"stargazers_count":1434,"watchers_count":1434,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":128,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":4,"license":{"key":"mit","name":"MIT
         License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["cli","progress","progress-bar","progressbar","progressbars","terminal"],"visibility":"public","forks":128,"open_issues":4,"watchers":1434,"default_branch":"master","temp_clone_token":null,"network_count":128,"subscribers_count":24}'
-  recorded_at: Mon, 29 Nov 2021 11:52:36 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:14 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/thor.json
@@ -481,7 +481,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:36 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
   response:
     status:
       code: 200
@@ -512,42 +512,42 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7816fa2f-f18c-49f7-aca0-9978aa64bb88
+      - 12fe7bc5-46f9-4c86-8cd9-b8226b1736a8
       X-Runtime:
-      - '0.020867'
+      - '0.014498'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 52.88.209.40:443
+      - F_Rails 44.239.42.136:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18736-HND
+      - cache-tyo11974-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186757.979853,VS0,VE135
+      - S1638229755.501743,VS0,VE125
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"2ca6017faba6875ff0dadb4e90a16bbe"'
+      - '"aefb5218b2f61488ec3bd00028af9c99"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"thor","downloads":455202202,"version":"1.1.0","version_created_at":"2021-01-20T16:54:30.555Z","version_downloads":45367381,"platform":"ruby","authors":"Yehuda
+      string: '{"name":"thor","downloads":455394116,"version":"1.1.0","version_created_at":"2021-01-20T16:54:30.555Z","version_downloads":45478996,"platform":"ruby","authors":"Yehuda
         Katz, José Valim","info":"Thor is a toolkit for building powerful command-line
         interfaces.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/erikhuda/thor/wiki","changelog_uri":"https://github.com/erikhuda/thor/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/erikhuda/thor/issues","source_code_uri":"https://github.com/erikhuda/thor/tree/v1.1.0","documentation_uri":"http://whatisthor.com/"},"yanked":false,"sha":"cacae12a3761be4ccbe63be19261352b108f86c721c37d87664328efeaa6d0a3","project_uri":"https://rubygems.org/gems/thor","gem_uri":"https://rubygems.org/gems/thor-1.1.0.gem","homepage_uri":"http://whatisthor.com/","wiki_uri":"https://github.com/erikhuda/thor/wiki","documentation_uri":"http://whatisthor.com/","mailing_list_uri":null,"source_code_uri":"https://github.com/erikhuda/thor/tree/v1.1.0","bug_tracker_uri":"https://github.com/erikhuda/thor/issues","changelog_uri":"https://github.com/erikhuda/thor/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
         1.0, \u003c 3"}],"runtime":[]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:37 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:14 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/erikhuda/thor
@@ -560,7 +560,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
   response:
     status:
       code: 301
@@ -569,7 +569,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -602,19 +602,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '27'
+      - '45'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '33'
+      - '15'
       X-Github-Request-Id:
-      - CD08:4B33:35F89A:3C5CC4:61A4BF05
+      - D9AC:3CAC:3CB61:C2FFB:61A566FA
     body:
       encoding: UTF-8
       string: '{"message":"Moved Permanently","url":"https://api.github.com/repositories/15257","documentation_url":"https://docs.github.com/v3/#http-redirects"}'
-  recorded_at: Mon, 29 Nov 2021 11:52:37 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:14 GMT
 - request:
     method: get
     uri: https://api.github.com/repositories/15257
@@ -627,7 +627,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:14 GMT
   response:
     status:
       code: 200
@@ -636,7 +636,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -671,25 +671,25 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '26'
+      - '44'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '34'
+      - '16'
       Accept-Ranges:
       - bytes
       Content-Length:
       - '5617'
       X-Github-Request-Id:
-      - CD0A:5BE0:326486:38CD87:61A4BF05
+      - D9AE:3CAD:116A5A:19E0EA:61A566FA
     body:
       encoding: UTF-8
       string: '{"id":15257,"node_id":"MDEwOlJlcG9zaXRvcnkxNTI1Nw==","name":"thor","full_name":"rails/thor","private":false,"owner":{"login":"rails","id":4223,"node_id":"MDEyOk9yZ2FuaXphdGlvbjQyMjM=","avatar_url":"https://avatars.githubusercontent.com/u/4223?v=4","gravatar_id":"","url":"https://api.github.com/users/rails","html_url":"https://github.com/rails","followers_url":"https://api.github.com/users/rails/followers","following_url":"https://api.github.com/users/rails/following{/other_user}","gists_url":"https://api.github.com/users/rails/gists{/gist_id}","starred_url":"https://api.github.com/users/rails/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rails/subscriptions","organizations_url":"https://api.github.com/users/rails/orgs","repos_url":"https://api.github.com/users/rails/repos","events_url":"https://api.github.com/users/rails/events{/privacy}","received_events_url":"https://api.github.com/users/rails/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/rails/thor","description":"Thor
         is a toolkit for building powerful command-line interfaces.","fork":false,"url":"https://api.github.com/repos/rails/thor","forks_url":"https://api.github.com/repos/rails/thor/forks","keys_url":"https://api.github.com/repos/rails/thor/keys{/key_id}","collaborators_url":"https://api.github.com/repos/rails/thor/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/rails/thor/teams","hooks_url":"https://api.github.com/repos/rails/thor/hooks","issue_events_url":"https://api.github.com/repos/rails/thor/issues/events{/number}","events_url":"https://api.github.com/repos/rails/thor/events","assignees_url":"https://api.github.com/repos/rails/thor/assignees{/user}","branches_url":"https://api.github.com/repos/rails/thor/branches{/branch}","tags_url":"https://api.github.com/repos/rails/thor/tags","blobs_url":"https://api.github.com/repos/rails/thor/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/rails/thor/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/rails/thor/git/refs{/sha}","trees_url":"https://api.github.com/repos/rails/thor/git/trees{/sha}","statuses_url":"https://api.github.com/repos/rails/thor/statuses/{sha}","languages_url":"https://api.github.com/repos/rails/thor/languages","stargazers_url":"https://api.github.com/repos/rails/thor/stargazers","contributors_url":"https://api.github.com/repos/rails/thor/contributors","subscribers_url":"https://api.github.com/repos/rails/thor/subscribers","subscription_url":"https://api.github.com/repos/rails/thor/subscription","commits_url":"https://api.github.com/repos/rails/thor/commits{/sha}","git_commits_url":"https://api.github.com/repos/rails/thor/git/commits{/sha}","comments_url":"https://api.github.com/repos/rails/thor/comments{/number}","issue_comment_url":"https://api.github.com/repos/rails/thor/issues/comments{/number}","contents_url":"https://api.github.com/repos/rails/thor/contents/{+path}","compare_url":"https://api.github.com/repos/rails/thor/compare/{base}...{head}","merges_url":"https://api.github.com/repos/rails/thor/merges","archive_url":"https://api.github.com/repos/rails/thor/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/rails/thor/downloads","issues_url":"https://api.github.com/repos/rails/thor/issues{/number}","pulls_url":"https://api.github.com/repos/rails/thor/pulls{/number}","milestones_url":"https://api.github.com/repos/rails/thor/milestones{/number}","notifications_url":"https://api.github.com/repos/rails/thor/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/rails/thor/labels{/name}","releases_url":"https://api.github.com/repos/rails/thor/releases{/id}","deployments_url":"https://api.github.com/repos/rails/thor/deployments","created_at":"2008-05-07T20:07:31Z","updated_at":"2021-11-29T01:26:34Z","pushed_at":"2021-11-04T14:09:18Z","git_url":"git://github.com/rails/thor.git","ssh_url":"git@github.com:rails/thor.git","clone_url":"https://github.com/rails/thor.git","svn_url":"https://github.com/rails/thor","homepage":"http://whatisthor.com/","size":2679,"stargazers_count":4806,"watchers_count":4806,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":true,"forks_count":523,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":189,"license":{"key":"mit","name":"MIT
         License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":523,"open_issues":189,"watchers":4806,"default_branch":"master","temp_clone_token":null,"organization":{"login":"rails","id":4223,"node_id":"MDEyOk9yZ2FuaXphdGlvbjQyMjM=","avatar_url":"https://avatars.githubusercontent.com/u/4223?v=4","gravatar_id":"","url":"https://api.github.com/users/rails","html_url":"https://github.com/rails","followers_url":"https://api.github.com/users/rails/followers","following_url":"https://api.github.com/users/rails/following{/other_user}","gists_url":"https://api.github.com/users/rails/gists{/gist_id}","starred_url":"https://api.github.com/users/rails/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rails/subscriptions","organizations_url":"https://api.github.com/users/rails/orgs","repos_url":"https://api.github.com/users/rails/repos","events_url":"https://api.github.com/users/rails/events{/privacy}","received_events_url":"https://api.github.com/users/rails/received_events","type":"Organization","site_admin":false},"network_count":523,"subscribers_count":69}'
-  recorded_at: Mon, 29 Nov 2021 11:52:37 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:15 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/rspec.json
@@ -702,7 +702,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
   response:
     status:
       code: 200
@@ -733,42 +733,42 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d7eb6bc-3fa0-4747-9835-4007d4259714
+      - dfcc8134-3a1f-4903-9bb5-35d32de980f5
       X-Runtime:
-      - '0.021326'
+      - '0.015125'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 52.88.209.40:443
+      - F_Rails 54.70.75.100:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:37 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18730-HND
+      - cache-tyo11939-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186758.846240,VS0,VE135
+      - S1638229755.375611,VS0,VE153
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"c2a4592cfb0cb5a450a332dd714a965d"'
+      - '"2a508a07b8fc33f48c42088acfd40308"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"rspec","downloads":572633573,"version":"3.10.0","version_created_at":"2020-10-30T14:33:42.785Z","version_downloads":31467072,"platform":"ruby","authors":"Steven
+      string: '{"name":"rspec","downloads":572752863,"version":"3.10.0","version_created_at":"2020-10-30T14:33:42.785Z","version_downloads":31541113,"platform":"ruby","authors":"Steven
         Baker, David Chelimsky, Myron Marston","info":"BDD for Ruby","licenses":["MIT"],"metadata":{"bug_tracker_uri":"https://github.com/rspec/rspec/issues","source_code_uri":"https://github.com/rspec/rspec","mailing_list_uri":"https://groups.google.com/forum/#!forum/rspec","documentation_uri":"https://rspec.info/documentation/"},"yanked":false,"sha":"b870b43d49ae4a4e063b94976d2742b0854ec10458c425d569b5556ee5898ab7","project_uri":"https://rubygems.org/gems/rspec","gem_uri":"https://rubygems.org/gems/rspec-3.10.0.gem","homepage_uri":"http://github.com/rspec","wiki_uri":null,"documentation_uri":"https://rspec.info/documentation/","mailing_list_uri":"https://groups.google.com/forum/#!forum/rspec","source_code_uri":"https://github.com/rspec/rspec","bug_tracker_uri":"https://github.com/rspec/rspec/issues","changelog_uri":null,"funding_uri":null,"dependencies":{"development":[],"runtime":[{"name":"rspec-core","requirements":"~\u003e
         3.10.0"},{"name":"rspec-expectations","requirements":"~\u003e 3.10.0"},{"name":"rspec-mocks","requirements":"~\u003e
         3.10.0"}]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:38 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:15 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/rspec/rspec
@@ -781,7 +781,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:38 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
   response:
     status:
       code: 301
@@ -790,7 +790,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:38 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -823,19 +823,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '25'
+      - '43'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '35'
+      - '17'
       X-Github-Request-Id:
-      - CD0E:7B87:32E3FF:394740:61A4BF06
+      - D9B2:351E:10B4CE:1881B7:61A566FB
     body:
       encoding: UTF-8
       string: '{"message":"Moved Permanently","url":"https://api.github.com/repositories/239001","documentation_url":"https://docs.github.com/v3/#http-redirects"}'
-  recorded_at: Mon, 29 Nov 2021 11:52:38 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:15 GMT
 - request:
     method: get
     uri: https://api.github.com/repositories/239001
@@ -848,7 +848,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:38 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
   response:
     status:
       code: 200
@@ -857,7 +857,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:38 GMT
+      - Mon, 29 Nov 2021 23:49:15 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -892,25 +892,25 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '24'
+      - '42'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '36'
+      - '18'
       Accept-Ranges:
       - bytes
       Content-Length:
       - '5978'
       X-Github-Request-Id:
-      - CD10:5BDF:D1570:134CF7:61A4BF06
+      - D9B4:3CAE:42A6A5:4B56EC:61A566FB
     body:
       encoding: UTF-8
       string: '{"id":239001,"node_id":"MDEwOlJlcG9zaXRvcnkyMzkwMDE=","name":"rspec-metagem","full_name":"rspec/rspec-metagem","private":false,"owner":{"login":"rspec","id":22388,"node_id":"MDEyOk9yZ2FuaXphdGlvbjIyMzg4","avatar_url":"https://avatars.githubusercontent.com/u/22388?v=4","gravatar_id":"","url":"https://api.github.com/users/rspec","html_url":"https://github.com/rspec","followers_url":"https://api.github.com/users/rspec/followers","following_url":"https://api.github.com/users/rspec/following{/other_user}","gists_url":"https://api.github.com/users/rspec/gists{/gist_id}","starred_url":"https://api.github.com/users/rspec/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rspec/subscriptions","organizations_url":"https://api.github.com/users/rspec/orgs","repos_url":"https://api.github.com/users/rspec/repos","events_url":"https://api.github.com/users/rspec/events{/privacy}","received_events_url":"https://api.github.com/users/rspec/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/rspec/rspec-metagem","description":"RSpec
         meta-gem that depends on the other components","fork":false,"url":"https://api.github.com/repos/rspec/rspec-metagem","forks_url":"https://api.github.com/repos/rspec/rspec-metagem/forks","keys_url":"https://api.github.com/repos/rspec/rspec-metagem/keys{/key_id}","collaborators_url":"https://api.github.com/repos/rspec/rspec-metagem/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/rspec/rspec-metagem/teams","hooks_url":"https://api.github.com/repos/rspec/rspec-metagem/hooks","issue_events_url":"https://api.github.com/repos/rspec/rspec-metagem/issues/events{/number}","events_url":"https://api.github.com/repos/rspec/rspec-metagem/events","assignees_url":"https://api.github.com/repos/rspec/rspec-metagem/assignees{/user}","branches_url":"https://api.github.com/repos/rspec/rspec-metagem/branches{/branch}","tags_url":"https://api.github.com/repos/rspec/rspec-metagem/tags","blobs_url":"https://api.github.com/repos/rspec/rspec-metagem/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/rspec/rspec-metagem/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/rspec/rspec-metagem/git/refs{/sha}","trees_url":"https://api.github.com/repos/rspec/rspec-metagem/git/trees{/sha}","statuses_url":"https://api.github.com/repos/rspec/rspec-metagem/statuses/{sha}","languages_url":"https://api.github.com/repos/rspec/rspec-metagem/languages","stargazers_url":"https://api.github.com/repos/rspec/rspec-metagem/stargazers","contributors_url":"https://api.github.com/repos/rspec/rspec-metagem/contributors","subscribers_url":"https://api.github.com/repos/rspec/rspec-metagem/subscribers","subscription_url":"https://api.github.com/repos/rspec/rspec-metagem/subscription","commits_url":"https://api.github.com/repos/rspec/rspec-metagem/commits{/sha}","git_commits_url":"https://api.github.com/repos/rspec/rspec-metagem/git/commits{/sha}","comments_url":"https://api.github.com/repos/rspec/rspec-metagem/comments{/number}","issue_comment_url":"https://api.github.com/repos/rspec/rspec-metagem/issues/comments{/number}","contents_url":"https://api.github.com/repos/rspec/rspec-metagem/contents/{+path}","compare_url":"https://api.github.com/repos/rspec/rspec-metagem/compare/{base}...{head}","merges_url":"https://api.github.com/repos/rspec/rspec-metagem/merges","archive_url":"https://api.github.com/repos/rspec/rspec-metagem/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/rspec/rspec-metagem/downloads","issues_url":"https://api.github.com/repos/rspec/rspec-metagem/issues{/number}","pulls_url":"https://api.github.com/repos/rspec/rspec-metagem/pulls{/number}","milestones_url":"https://api.github.com/repos/rspec/rspec-metagem/milestones{/number}","notifications_url":"https://api.github.com/repos/rspec/rspec-metagem/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/rspec/rspec-metagem/labels{/name}","releases_url":"https://api.github.com/repos/rspec/rspec-metagem/releases{/id}","deployments_url":"https://api.github.com/repos/rspec/rspec-metagem/deployments","created_at":"2009-06-29T16:13:38Z","updated_at":"2021-11-28T09:09:48Z","pushed_at":"2021-10-26T16:31:31Z","git_url":"git://github.com/rspec/rspec-metagem.git","ssh_url":"git@github.com:rspec/rspec-metagem.git","clone_url":"https://github.com/rspec/rspec-metagem.git","svn_url":"https://github.com/rspec/rspec-metagem","homepage":"","size":139,"stargazers_count":2837,"watchers_count":2837,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":false,"has_wiki":true,"has_pages":false,"forks_count":244,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":4,"license":{"key":"mit","name":"MIT
         License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":244,"open_issues":4,"watchers":2837,"default_branch":"main","temp_clone_token":null,"organization":{"login":"rspec","id":22388,"node_id":"MDEyOk9yZ2FuaXphdGlvbjIyMzg4","avatar_url":"https://avatars.githubusercontent.com/u/22388?v=4","gravatar_id":"","url":"https://api.github.com/users/rspec","html_url":"https://github.com/rspec","followers_url":"https://api.github.com/users/rspec/followers","following_url":"https://api.github.com/users/rspec/following{/other_user}","gists_url":"https://api.github.com/users/rspec/gists{/gist_id}","starred_url":"https://api.github.com/users/rspec/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rspec/subscriptions","organizations_url":"https://api.github.com/users/rspec/orgs","repos_url":"https://api.github.com/users/rspec/repos","events_url":"https://api.github.com/users/rspec/events{/privacy}","received_events_url":"https://api.github.com/users/rspec/received_events","type":"Organization","site_admin":false},"network_count":244,"subscribers_count":98}'
-  recorded_at: Mon, 29 Nov 2021 11:52:38 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:16 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/rubocop.json
@@ -923,7 +923,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:38 GMT
+      - Mon, 29 Nov 2021 23:49:16 GMT
   response:
     status:
       code: 200
@@ -954,38 +954,38 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d545f12a-33a4-45d1-a1f9-d336f78e93bb
+      - 5e8cd56c-35d7-4883-b2fa-d3d14ca52c68
       X-Runtime:
-      - '0.016652'
+      - '0.024139'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 54.70.75.100:443
+      - F_Rails 44.239.42.136:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:39 GMT
+      - Mon, 29 Nov 2021 23:49:16 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18737-HND
+      - cache-tyo11958-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186759.007283,VS0,VE146
+      - S1638229756.279079,VS0,VE151
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"d70e066248e710d6bcf77649087a642e"'
+      - '"b6b2e62bfe7269a636163f23c869f0de"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"rubocop","downloads":193864617,"version":"1.23.0","version_created_at":"2021-11-15T08:10:45.792Z","version_downloads":366920,"platform":"ruby","authors":"Bozhidar
+      string: '{"name":"rubocop","downloads":193999967,"version":"1.23.0","version_created_at":"2021-11-15T08:10:45.792Z","version_downloads":387844,"platform":"ruby","authors":"Bozhidar
         Batsov, Jonas Arvidsson, Yuji Nakayama","info":"    RuboCop is a Ruby code
         style checking and code formatting tool.\n    It aims to enforce the community-driven
         Ruby Style Guide.\n","licenses":["MIT"],"metadata":{"homepage_uri":"https://rubocop.org/","changelog_uri":"https://github.com/rubocop/rubocop/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/rubocop/rubocop/issues","source_code_uri":"https://github.com/rubocop/rubocop/","documentation_uri":"https://docs.rubocop.org/rubocop/1.23/","rubygems_mfa_required":"true"},"yanked":false,"sha":"0b0b110eb9309a750d02f4549dfdc5399d3384ddfd6758cb3e4bd3551a5e3b0e","project_uri":"https://rubygems.org/gems/rubocop","gem_uri":"https://rubygems.org/gems/rubocop-1.23.0.gem","homepage_uri":"https://rubocop.org/","wiki_uri":null,"documentation_uri":"https://docs.rubocop.org/rubocop/1.23/","mailing_list_uri":null,"source_code_uri":"https://github.com/rubocop/rubocop/","bug_tracker_uri":"https://github.com/rubocop/rubocop/issues","changelog_uri":"https://github.com/rubocop/rubocop/blob/master/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
@@ -995,7 +995,7 @@ http_interactions:
         3.0"},{"name":"rexml","requirements":"\u003e= 0"},{"name":"rubocop-ast","requirements":"\u003e=
         1.12.0, \u003c 2.0"},{"name":"ruby-progressbar","requirements":"~\u003e 1.7"},{"name":"unicode-display_width","requirements":"\u003e=
         1.4.0, \u003c 3.0"}]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:39 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:16 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/rubocop/rubocop
@@ -1008,7 +1008,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:39 GMT
+      - Mon, 29 Nov 2021 23:49:16 GMT
   response:
     status:
       code: 200
@@ -1017,7 +1017,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:39 GMT
+      - Mon, 29 Nov 2021 23:49:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -1025,9 +1025,9 @@ http_interactions:
       Vary:
       - Accept, Accept-Encoding, Accept, X-Requested-With
       Etag:
-      - W/"fe162da2d26b72a8154142b64e80e5071c507bbc0b2784ee00a7e64d92ae55fa"
+      - W/"e1b83c823d4c78c637df73a42557b45314f70a7b3076db5e111d32f89e02ad2e"
       Last-Modified:
-      - Mon, 29 Nov 2021 10:18:56 GMT
+      - Mon, 29 Nov 2021 15:16:49 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -1052,26 +1052,26 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '23'
+      - '41'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '37'
+      - '19'
       Accept-Ranges:
       - bytes
       Transfer-Encoding:
       - chunked
       X-Github-Request-Id:
-      - CD14:3CAD:DB003:13E713:61A4BF07
+      - D9B8:5BE0:408F5D:4947B1:61A566FC
     body:
       encoding: UTF-8
       string: '{"id":4095287,"node_id":"MDEwOlJlcG9zaXRvcnk0MDk1Mjg3","name":"rubocop","full_name":"rubocop/rubocop","private":false,"owner":{"login":"rubocop","id":10871348,"node_id":"MDEyOk9yZ2FuaXphdGlvbjEwODcxMzQ4","avatar_url":"https://avatars.githubusercontent.com/u/10871348?v=4","gravatar_id":"","url":"https://api.github.com/users/rubocop","html_url":"https://github.com/rubocop","followers_url":"https://api.github.com/users/rubocop/followers","following_url":"https://api.github.com/users/rubocop/following{/other_user}","gists_url":"https://api.github.com/users/rubocop/gists{/gist_id}","starred_url":"https://api.github.com/users/rubocop/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rubocop/subscriptions","organizations_url":"https://api.github.com/users/rubocop/orgs","repos_url":"https://api.github.com/users/rubocop/repos","events_url":"https://api.github.com/users/rubocop/events{/privacy}","received_events_url":"https://api.github.com/users/rubocop/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/rubocop/rubocop","description":"A
         Ruby static code analyzer and formatter, based on the community Ruby style
-        guide.","fork":false,"url":"https://api.github.com/repos/rubocop/rubocop","forks_url":"https://api.github.com/repos/rubocop/rubocop/forks","keys_url":"https://api.github.com/repos/rubocop/rubocop/keys{/key_id}","collaborators_url":"https://api.github.com/repos/rubocop/rubocop/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/rubocop/rubocop/teams","hooks_url":"https://api.github.com/repos/rubocop/rubocop/hooks","issue_events_url":"https://api.github.com/repos/rubocop/rubocop/issues/events{/number}","events_url":"https://api.github.com/repos/rubocop/rubocop/events","assignees_url":"https://api.github.com/repos/rubocop/rubocop/assignees{/user}","branches_url":"https://api.github.com/repos/rubocop/rubocop/branches{/branch}","tags_url":"https://api.github.com/repos/rubocop/rubocop/tags","blobs_url":"https://api.github.com/repos/rubocop/rubocop/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/rubocop/rubocop/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/rubocop/rubocop/git/refs{/sha}","trees_url":"https://api.github.com/repos/rubocop/rubocop/git/trees{/sha}","statuses_url":"https://api.github.com/repos/rubocop/rubocop/statuses/{sha}","languages_url":"https://api.github.com/repos/rubocop/rubocop/languages","stargazers_url":"https://api.github.com/repos/rubocop/rubocop/stargazers","contributors_url":"https://api.github.com/repos/rubocop/rubocop/contributors","subscribers_url":"https://api.github.com/repos/rubocop/rubocop/subscribers","subscription_url":"https://api.github.com/repos/rubocop/rubocop/subscription","commits_url":"https://api.github.com/repos/rubocop/rubocop/commits{/sha}","git_commits_url":"https://api.github.com/repos/rubocop/rubocop/git/commits{/sha}","comments_url":"https://api.github.com/repos/rubocop/rubocop/comments{/number}","issue_comment_url":"https://api.github.com/repos/rubocop/rubocop/issues/comments{/number}","contents_url":"https://api.github.com/repos/rubocop/rubocop/contents/{+path}","compare_url":"https://api.github.com/repos/rubocop/rubocop/compare/{base}...{head}","merges_url":"https://api.github.com/repos/rubocop/rubocop/merges","archive_url":"https://api.github.com/repos/rubocop/rubocop/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/rubocop/rubocop/downloads","issues_url":"https://api.github.com/repos/rubocop/rubocop/issues{/number}","pulls_url":"https://api.github.com/repos/rubocop/rubocop/pulls{/number}","milestones_url":"https://api.github.com/repos/rubocop/rubocop/milestones{/number}","notifications_url":"https://api.github.com/repos/rubocop/rubocop/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/rubocop/rubocop/labels{/name}","releases_url":"https://api.github.com/repos/rubocop/rubocop/releases{/id}","deployments_url":"https://api.github.com/repos/rubocop/rubocop/deployments","created_at":"2012-04-21T10:09:58Z","updated_at":"2021-11-29T10:18:56Z","pushed_at":"2021-11-29T04:42:13Z","git_url":"git://github.com/rubocop/rubocop.git","ssh_url":"git@github.com:rubocop/rubocop.git","clone_url":"https://github.com/rubocop/rubocop.git","svn_url":"https://github.com/rubocop/rubocop","homepage":"https://docs.rubocop.org","size":44845,"stargazers_count":11570,"watchers_count":11570,"language":"Ruby","has_issues":true,"has_projects":false,"has_downloads":true,"has_wiki":false,"has_pages":true,"forks_count":2802,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":222,"license":{"key":"mit","name":"MIT
-        License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["code-formatter","hacktoberfest","linter","rubocop","ruby","static-code-analysis"],"visibility":"public","forks":2802,"open_issues":222,"watchers":11570,"default_branch":"master","temp_clone_token":null,"organization":{"login":"rubocop","id":10871348,"node_id":"MDEyOk9yZ2FuaXphdGlvbjEwODcxMzQ4","avatar_url":"https://avatars.githubusercontent.com/u/10871348?v=4","gravatar_id":"","url":"https://api.github.com/users/rubocop","html_url":"https://github.com/rubocop","followers_url":"https://api.github.com/users/rubocop/followers","following_url":"https://api.github.com/users/rubocop/following{/other_user}","gists_url":"https://api.github.com/users/rubocop/gists{/gist_id}","starred_url":"https://api.github.com/users/rubocop/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rubocop/subscriptions","organizations_url":"https://api.github.com/users/rubocop/orgs","repos_url":"https://api.github.com/users/rubocop/repos","events_url":"https://api.github.com/users/rubocop/events{/privacy}","received_events_url":"https://api.github.com/users/rubocop/received_events","type":"Organization","site_admin":false},"network_count":2802,"subscribers_count":189}'
-  recorded_at: Mon, 29 Nov 2021 11:52:39 GMT
+        guide.","fork":false,"url":"https://api.github.com/repos/rubocop/rubocop","forks_url":"https://api.github.com/repos/rubocop/rubocop/forks","keys_url":"https://api.github.com/repos/rubocop/rubocop/keys{/key_id}","collaborators_url":"https://api.github.com/repos/rubocop/rubocop/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/rubocop/rubocop/teams","hooks_url":"https://api.github.com/repos/rubocop/rubocop/hooks","issue_events_url":"https://api.github.com/repos/rubocop/rubocop/issues/events{/number}","events_url":"https://api.github.com/repos/rubocop/rubocop/events","assignees_url":"https://api.github.com/repos/rubocop/rubocop/assignees{/user}","branches_url":"https://api.github.com/repos/rubocop/rubocop/branches{/branch}","tags_url":"https://api.github.com/repos/rubocop/rubocop/tags","blobs_url":"https://api.github.com/repos/rubocop/rubocop/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/rubocop/rubocop/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/rubocop/rubocop/git/refs{/sha}","trees_url":"https://api.github.com/repos/rubocop/rubocop/git/trees{/sha}","statuses_url":"https://api.github.com/repos/rubocop/rubocop/statuses/{sha}","languages_url":"https://api.github.com/repos/rubocop/rubocop/languages","stargazers_url":"https://api.github.com/repos/rubocop/rubocop/stargazers","contributors_url":"https://api.github.com/repos/rubocop/rubocop/contributors","subscribers_url":"https://api.github.com/repos/rubocop/rubocop/subscribers","subscription_url":"https://api.github.com/repos/rubocop/rubocop/subscription","commits_url":"https://api.github.com/repos/rubocop/rubocop/commits{/sha}","git_commits_url":"https://api.github.com/repos/rubocop/rubocop/git/commits{/sha}","comments_url":"https://api.github.com/repos/rubocop/rubocop/comments{/number}","issue_comment_url":"https://api.github.com/repos/rubocop/rubocop/issues/comments{/number}","contents_url":"https://api.github.com/repos/rubocop/rubocop/contents/{+path}","compare_url":"https://api.github.com/repos/rubocop/rubocop/compare/{base}...{head}","merges_url":"https://api.github.com/repos/rubocop/rubocop/merges","archive_url":"https://api.github.com/repos/rubocop/rubocop/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/rubocop/rubocop/downloads","issues_url":"https://api.github.com/repos/rubocop/rubocop/issues{/number}","pulls_url":"https://api.github.com/repos/rubocop/rubocop/pulls{/number}","milestones_url":"https://api.github.com/repos/rubocop/rubocop/milestones{/number}","notifications_url":"https://api.github.com/repos/rubocop/rubocop/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/rubocop/rubocop/labels{/name}","releases_url":"https://api.github.com/repos/rubocop/rubocop/releases{/id}","deployments_url":"https://api.github.com/repos/rubocop/rubocop/deployments","created_at":"2012-04-21T10:09:58Z","updated_at":"2021-11-29T15:16:49Z","pushed_at":"2021-11-29T15:16:36Z","git_url":"git://github.com/rubocop/rubocop.git","ssh_url":"git@github.com:rubocop/rubocop.git","clone_url":"https://github.com/rubocop/rubocop.git","svn_url":"https://github.com/rubocop/rubocop","homepage":"https://docs.rubocop.org","size":44199,"stargazers_count":11571,"watchers_count":11571,"language":"Ruby","has_issues":true,"has_projects":false,"has_downloads":true,"has_wiki":false,"has_pages":true,"forks_count":2802,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":220,"license":{"key":"mit","name":"MIT
+        License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["code-formatter","hacktoberfest","linter","rubocop","ruby","static-code-analysis"],"visibility":"public","forks":2802,"open_issues":220,"watchers":11571,"default_branch":"master","temp_clone_token":null,"organization":{"login":"rubocop","id":10871348,"node_id":"MDEyOk9yZ2FuaXphdGlvbjEwODcxMzQ4","avatar_url":"https://avatars.githubusercontent.com/u/10871348?v=4","gravatar_id":"","url":"https://api.github.com/users/rubocop","html_url":"https://github.com/rubocop","followers_url":"https://api.github.com/users/rubocop/followers","following_url":"https://api.github.com/users/rubocop/following{/other_user}","gists_url":"https://api.github.com/users/rubocop/gists{/gist_id}","starred_url":"https://api.github.com/users/rubocop/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rubocop/subscriptions","organizations_url":"https://api.github.com/users/rubocop/orgs","repos_url":"https://api.github.com/users/rubocop/repos","events_url":"https://api.github.com/users/rubocop/events{/privacy}","received_events_url":"https://api.github.com/users/rubocop/received_events","type":"Organization","site_admin":false},"network_count":2802,"subscribers_count":188}'
+  recorded_at: Mon, 29 Nov 2021 23:49:16 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/simplecov.json
@@ -1084,7 +1084,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:39 GMT
+      - Mon, 29 Nov 2021 23:49:16 GMT
   response:
     status:
       code: 200
@@ -1115,43 +1115,43 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e35c4c21-ca42-46da-87e3-0534a1548181
+      - 1d48f9b8-7dcc-42bd-a619-f4e4b2b9050c
       X-Runtime:
-      - '0.015557'
+      - '0.016309'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 52.88.209.40:443
+      - F_Rails 44.239.42.136:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:39 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18740-HND
+      - cache-tyo11957-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186760.724104,VS0,VE133
+      - S1638229757.938974,VS0,VE143
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"2d95355417ee618abe1ab10352155c54"'
+      - '"45a6b85f8d5ebef4954a545bf4321eaa"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"simplecov","downloads":164912958,"version":"0.21.2","version_created_at":"2021-01-09T13:35:22.193Z","version_downloads":12842346,"platform":"ruby","authors":"Christoph
+      string: '{"name":"simplecov","downloads":165011276,"version":"0.21.2","version_created_at":"2021-01-09T13:35:22.193Z","version_downloads":12889471,"platform":"ruby","authors":"Christoph
         Olszowka, Tobias Pfeiffer","info":"Code coverage for Ruby with a powerful
         configuration library and automatic merging of coverage across test suites","licenses":["MIT"],"metadata":{"changelog_uri":"https://github.com/simplecov-ruby/simplecov/blob/main/CHANGELOG.md","bug_tracker_uri":"https://github.com/simplecov-ruby/simplecov/issues","source_code_uri":"https://github.com/simplecov-ruby/simplecov/tree/v0.21.2","mailing_list_uri":"https://groups.google.com/forum/#!forum/simplecov","documentation_uri":"https://www.rubydoc.info/gems/simplecov/0.21.2"},"yanked":false,"sha":"990db6aedb55086d6bf8874993ff1f796e4830abfa11937468ca502a0d013bc3","project_uri":"https://rubygems.org/gems/simplecov","gem_uri":"https://rubygems.org/gems/simplecov-0.21.2.gem","homepage_uri":"https://github.com/simplecov-ruby/simplecov","wiki_uri":null,"documentation_uri":"https://www.rubydoc.info/gems/simplecov/0.21.2","mailing_list_uri":"https://groups.google.com/forum/#!forum/simplecov","source_code_uri":"https://github.com/simplecov-ruby/simplecov/tree/v0.21.2","bug_tracker_uri":"https://github.com/simplecov-ruby/simplecov/issues","changelog_uri":"https://github.com/simplecov-ruby/simplecov/blob/main/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[],"runtime":[{"name":"docile","requirements":"~\u003e
         1.1"},{"name":"simplecov-html","requirements":"~\u003e 0.11"},{"name":"simplecov_json_formatter","requirements":"~\u003e
         0.1"}]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:39 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:17 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/simplecov-ruby/simplecov
@@ -1164,7 +1164,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:40 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
   response:
     status:
       code: 200
@@ -1173,7 +1173,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:40 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -1208,26 +1208,26 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '22'
+      - '40'
       X-Ratelimit-Reset:
-      - '1638188888'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '38'
+      - '20'
       Accept-Ranges:
       - bytes
       Transfer-Encoding:
       - chunked
       X-Github-Request-Id:
-      - CD18:7B86:138158:19B907:61A4BF08
+      - D9BC:5470:41E3CF:4A9A1C:61A566FD
     body:
       encoding: UTF-8
       string: '{"id":839336,"node_id":"MDEwOlJlcG9zaXRvcnk4MzkzMzY=","name":"simplecov","full_name":"simplecov-ruby/simplecov","private":false,"owner":{"login":"simplecov-ruby","id":67860375,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY3ODYwMzc1","avatar_url":"https://avatars.githubusercontent.com/u/67860375?v=4","gravatar_id":"","url":"https://api.github.com/users/simplecov-ruby","html_url":"https://github.com/simplecov-ruby","followers_url":"https://api.github.com/users/simplecov-ruby/followers","following_url":"https://api.github.com/users/simplecov-ruby/following{/other_user}","gists_url":"https://api.github.com/users/simplecov-ruby/gists{/gist_id}","starred_url":"https://api.github.com/users/simplecov-ruby/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/simplecov-ruby/subscriptions","organizations_url":"https://api.github.com/users/simplecov-ruby/orgs","repos_url":"https://api.github.com/users/simplecov-ruby/repos","events_url":"https://api.github.com/users/simplecov-ruby/events{/privacy}","received_events_url":"https://api.github.com/users/simplecov-ruby/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/simplecov-ruby/simplecov","description":"Code
         coverage for Ruby with a powerful configuration library and automatic merging
         of coverage across test suites","fork":false,"url":"https://api.github.com/repos/simplecov-ruby/simplecov","forks_url":"https://api.github.com/repos/simplecov-ruby/simplecov/forks","keys_url":"https://api.github.com/repos/simplecov-ruby/simplecov/keys{/key_id}","collaborators_url":"https://api.github.com/repos/simplecov-ruby/simplecov/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/simplecov-ruby/simplecov/teams","hooks_url":"https://api.github.com/repos/simplecov-ruby/simplecov/hooks","issue_events_url":"https://api.github.com/repos/simplecov-ruby/simplecov/issues/events{/number}","events_url":"https://api.github.com/repos/simplecov-ruby/simplecov/events","assignees_url":"https://api.github.com/repos/simplecov-ruby/simplecov/assignees{/user}","branches_url":"https://api.github.com/repos/simplecov-ruby/simplecov/branches{/branch}","tags_url":"https://api.github.com/repos/simplecov-ruby/simplecov/tags","blobs_url":"https://api.github.com/repos/simplecov-ruby/simplecov/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/simplecov-ruby/simplecov/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/simplecov-ruby/simplecov/git/refs{/sha}","trees_url":"https://api.github.com/repos/simplecov-ruby/simplecov/git/trees{/sha}","statuses_url":"https://api.github.com/repos/simplecov-ruby/simplecov/statuses/{sha}","languages_url":"https://api.github.com/repos/simplecov-ruby/simplecov/languages","stargazers_url":"https://api.github.com/repos/simplecov-ruby/simplecov/stargazers","contributors_url":"https://api.github.com/repos/simplecov-ruby/simplecov/contributors","subscribers_url":"https://api.github.com/repos/simplecov-ruby/simplecov/subscribers","subscription_url":"https://api.github.com/repos/simplecov-ruby/simplecov/subscription","commits_url":"https://api.github.com/repos/simplecov-ruby/simplecov/commits{/sha}","git_commits_url":"https://api.github.com/repos/simplecov-ruby/simplecov/git/commits{/sha}","comments_url":"https://api.github.com/repos/simplecov-ruby/simplecov/comments{/number}","issue_comment_url":"https://api.github.com/repos/simplecov-ruby/simplecov/issues/comments{/number}","contents_url":"https://api.github.com/repos/simplecov-ruby/simplecov/contents/{+path}","compare_url":"https://api.github.com/repos/simplecov-ruby/simplecov/compare/{base}...{head}","merges_url":"https://api.github.com/repos/simplecov-ruby/simplecov/merges","archive_url":"https://api.github.com/repos/simplecov-ruby/simplecov/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/simplecov-ruby/simplecov/downloads","issues_url":"https://api.github.com/repos/simplecov-ruby/simplecov/issues{/number}","pulls_url":"https://api.github.com/repos/simplecov-ruby/simplecov/pulls{/number}","milestones_url":"https://api.github.com/repos/simplecov-ruby/simplecov/milestones{/number}","notifications_url":"https://api.github.com/repos/simplecov-ruby/simplecov/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/simplecov-ruby/simplecov/labels{/name}","releases_url":"https://api.github.com/repos/simplecov-ruby/simplecov/releases{/id}","deployments_url":"https://api.github.com/repos/simplecov-ruby/simplecov/deployments","created_at":"2010-08-15T15:28:56Z","updated_at":"2021-11-28T01:16:10Z","pushed_at":"2021-11-23T23:02:02Z","git_url":"git://github.com/simplecov-ruby/simplecov.git","ssh_url":"git@github.com:simplecov-ruby/simplecov.git","clone_url":"https://github.com/simplecov-ruby/simplecov.git","svn_url":"https://github.com/simplecov-ruby/simplecov","homepage":"","size":2674,"stargazers_count":4352,"watchers_count":4352,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":false,"has_pages":true,"forks_count":511,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":81,"license":{"key":"mit","name":"MIT
         License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":["code-quality","coverage","coverage-library","coverage-report","rails","ruby","test-coverage"],"visibility":"public","forks":511,"open_issues":81,"watchers":4352,"default_branch":"main","temp_clone_token":null,"organization":{"login":"simplecov-ruby","id":67860375,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY3ODYwMzc1","avatar_url":"https://avatars.githubusercontent.com/u/67860375?v=4","gravatar_id":"","url":"https://api.github.com/users/simplecov-ruby","html_url":"https://github.com/simplecov-ruby","followers_url":"https://api.github.com/users/simplecov-ruby/followers","following_url":"https://api.github.com/users/simplecov-ruby/following{/other_user}","gists_url":"https://api.github.com/users/simplecov-ruby/gists{/gist_id}","starred_url":"https://api.github.com/users/simplecov-ruby/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/simplecov-ruby/subscriptions","organizations_url":"https://api.github.com/users/simplecov-ruby/orgs","repos_url":"https://api.github.com/users/simplecov-ruby/repos","events_url":"https://api.github.com/users/simplecov-ruby/events{/privacy}","received_events_url":"https://api.github.com/users/simplecov-ruby/received_events","type":"Organization","site_admin":false},"network_count":511,"subscribers_count":69}'
-  recorded_at: Mon, 29 Nov 2021 11:52:40 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:17 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/vcr.json
@@ -1240,7 +1240,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:40 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
   response:
     status:
       code: 200
@@ -1271,38 +1271,38 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9c73dd91-3642-4ffb-8223-370c02851a5d
+      - efa44949-6b5c-4bcf-9c59-f36f3a5725c7
       X-Runtime:
-      - '0.016610'
+      - '0.015232'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 54.70.75.100:443
+      - F_Rails 52.88.209.40:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:40 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18745-HND
+      - cache-tyo11981-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186761.595758,VS0,VE160
+      - S1638229758.593218,VS0,VE143
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"627982c3476ad43c1cce67608bdba77a"'
+      - '"b77398c5679105e77b938c7118bb1565"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"vcr","downloads":55665618,"version":"6.0.0","version_created_at":"2020-05-28T07:35:18.868Z","version_downloads":8753140,"platform":"ruby","authors":"Myron
+      string: '{"name":"vcr","downloads":55705587,"version":"6.0.0","version_created_at":"2020-05-28T07:35:18.868Z","version_downloads":8774237,"platform":"ruby","authors":"Myron
         Marston, Kurtis Rainbolt-Greene, Olle Jonsson","info":"Record your test suite''s
         HTTP interactions and replay them during future test runs for fast, deterministic,
         accurate tests.","licenses":["Hippocratic-2.1","MIT"],"metadata":{},"yanked":false,"sha":"6a28a042cd65fc70b8c02a8e32ef71a423c8387bf2994e35824b4ec94f1132c9","project_uri":"https://rubygems.org/gems/vcr","gem_uri":"https://rubygems.org/gems/vcr-6.0.0.gem","homepage_uri":"https://relishapp.com/vcr/vcr/docs","wiki_uri":"","documentation_uri":"https://www.relishapp.com/vcr/vcr","mailing_list_uri":"http://groups.google.com/group/vcr-ruby","source_code_uri":"https://github.com/vcr/vcr","bug_tracker_uri":"https://github.com/vcr/vcr/issues","changelog_uri":null,"funding_uri":null,"dependencies":{"development":[{"name":"aruba","requirements":"~\u003e
@@ -1317,7 +1317,7 @@ http_interactions:
         0"},{"name":"test-unit","requirements":"~\u003e 3.1.4"},{"name":"timecop","requirements":"\u003e=
         0"},{"name":"webmock","requirements":"\u003e= 0"},{"name":"yard","requirements":"\u003e=
         0"}],"runtime":[]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:40 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:17 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/vcr/vcr
@@ -1330,7 +1330,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:40 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
   response:
     status:
       code: 200
@@ -1339,7 +1339,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:41 GMT
+      - Mon, 29 Nov 2021 23:49:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -1374,25 +1374,25 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '21'
+      - '39'
       X-Ratelimit-Reset:
-      - '1638188887'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '39'
+      - '21'
       Accept-Ranges:
       - bytes
       Transfer-Encoding:
       - chunked
       X-Github-Request-Id:
-      - CD1C:7B87:32E452:3947A2:61A4BF08
+      - C0C4:4FC5:3F0CA7:47C5C2:61A566FD
     body:
       encoding: UTF-8
       string: '{"id":535266,"node_id":"MDEwOlJlcG9zaXRvcnk1MzUyNjY=","name":"vcr","full_name":"vcr/vcr","private":false,"owner":{"login":"vcr","id":2902977,"node_id":"MDEyOk9yZ2FuaXphdGlvbjI5MDI5Nzc=","avatar_url":"https://avatars.githubusercontent.com/u/2902977?v=4","gravatar_id":"","url":"https://api.github.com/users/vcr","html_url":"https://github.com/vcr","followers_url":"https://api.github.com/users/vcr/followers","following_url":"https://api.github.com/users/vcr/following{/other_user}","gists_url":"https://api.github.com/users/vcr/gists{/gist_id}","starred_url":"https://api.github.com/users/vcr/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/vcr/subscriptions","organizations_url":"https://api.github.com/users/vcr/orgs","repos_url":"https://api.github.com/users/vcr/repos","events_url":"https://api.github.com/users/vcr/events{/privacy}","received_events_url":"https://api.github.com/users/vcr/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/vcr/vcr","description":"Record
         your test suite''s HTTP interactions and replay them during future test runs
         for fast, deterministic, accurate tests.","fork":false,"url":"https://api.github.com/repos/vcr/vcr","forks_url":"https://api.github.com/repos/vcr/vcr/forks","keys_url":"https://api.github.com/repos/vcr/vcr/keys{/key_id}","collaborators_url":"https://api.github.com/repos/vcr/vcr/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/vcr/vcr/teams","hooks_url":"https://api.github.com/repos/vcr/vcr/hooks","issue_events_url":"https://api.github.com/repos/vcr/vcr/issues/events{/number}","events_url":"https://api.github.com/repos/vcr/vcr/events","assignees_url":"https://api.github.com/repos/vcr/vcr/assignees{/user}","branches_url":"https://api.github.com/repos/vcr/vcr/branches{/branch}","tags_url":"https://api.github.com/repos/vcr/vcr/tags","blobs_url":"https://api.github.com/repos/vcr/vcr/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/vcr/vcr/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/vcr/vcr/git/refs{/sha}","trees_url":"https://api.github.com/repos/vcr/vcr/git/trees{/sha}","statuses_url":"https://api.github.com/repos/vcr/vcr/statuses/{sha}","languages_url":"https://api.github.com/repos/vcr/vcr/languages","stargazers_url":"https://api.github.com/repos/vcr/vcr/stargazers","contributors_url":"https://api.github.com/repos/vcr/vcr/contributors","subscribers_url":"https://api.github.com/repos/vcr/vcr/subscribers","subscription_url":"https://api.github.com/repos/vcr/vcr/subscription","commits_url":"https://api.github.com/repos/vcr/vcr/commits{/sha}","git_commits_url":"https://api.github.com/repos/vcr/vcr/git/commits{/sha}","comments_url":"https://api.github.com/repos/vcr/vcr/comments{/number}","issue_comment_url":"https://api.github.com/repos/vcr/vcr/issues/comments{/number}","contents_url":"https://api.github.com/repos/vcr/vcr/contents/{+path}","compare_url":"https://api.github.com/repos/vcr/vcr/compare/{base}...{head}","merges_url":"https://api.github.com/repos/vcr/vcr/merges","archive_url":"https://api.github.com/repos/vcr/vcr/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/vcr/vcr/downloads","issues_url":"https://api.github.com/repos/vcr/vcr/issues{/number}","pulls_url":"https://api.github.com/repos/vcr/vcr/pulls{/number}","milestones_url":"https://api.github.com/repos/vcr/vcr/milestones{/number}","notifications_url":"https://api.github.com/repos/vcr/vcr/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/vcr/vcr/labels{/name}","releases_url":"https://api.github.com/repos/vcr/vcr/releases{/id}","deployments_url":"https://api.github.com/repos/vcr/vcr/deployments","created_at":"2010-02-25T07:16:00Z","updated_at":"2021-11-29T08:33:34Z","pushed_at":"2021-11-19T17:22:44Z","git_url":"git://github.com/vcr/vcr.git","ssh_url":"git@github.com:vcr/vcr.git","clone_url":"https://github.com/vcr/vcr.git","svn_url":"https://github.com/vcr/vcr","homepage":"https://relishapp.com/vcr/vcr/docs","size":3300,"stargazers_count":5246,"watchers_count":5246,"language":"Ruby","has_issues":true,"has_projects":false,"has_downloads":true,"has_wiki":true,"has_pages":true,"forks_count":476,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":62,"license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":476,"open_issues":62,"watchers":5246,"default_branch":"master","temp_clone_token":null,"organization":{"login":"vcr","id":2902977,"node_id":"MDEyOk9yZ2FuaXphdGlvbjI5MDI5Nzc=","avatar_url":"https://avatars.githubusercontent.com/u/2902977?v=4","gravatar_id":"","url":"https://api.github.com/users/vcr","html_url":"https://github.com/vcr","followers_url":"https://api.github.com/users/vcr/followers","following_url":"https://api.github.com/users/vcr/following{/other_user}","gists_url":"https://api.github.com/users/vcr/gists{/gist_id}","starred_url":"https://api.github.com/users/vcr/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/vcr/subscriptions","organizations_url":"https://api.github.com/users/vcr/orgs","repos_url":"https://api.github.com/users/vcr/repos","events_url":"https://api.github.com/users/vcr/events{/privacy}","received_events_url":"https://api.github.com/users/vcr/received_events","type":"Organization","site_admin":false},"network_count":476,"subscribers_count":71}'
-  recorded_at: Mon, 29 Nov 2021 11:52:41 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:18 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/webmock.json
@@ -1405,7 +1405,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:41 GMT
+      - Mon, 29 Nov 2021 23:49:18 GMT
   response:
     status:
       code: 200
@@ -1436,38 +1436,38 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4283be87-5971-417a-86f2-cb1b02066933
+      - '00916c7a-7306-4969-92a2-4b71f0d1be2b'
       X-Runtime:
-      - '0.199780'
+      - '0.018498'
       Strict-Transport-Security:
       - max-age=31536000
       X-Backend:
-      - F_Rails 44.239.42.136:443
+      - F_Rails 52.88.209.40:443
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 29 Nov 2021 11:52:41 GMT
+      - Mon, 29 Nov 2021 23:49:18 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-hnd18733-HND
+      - cache-tyo11934-TYO
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1638186761.239249,VS0,VE332
+      - S1638229758.237911,VS0,VE520
       Vary:
       - Accept-Encoding,Fastly-SSL
       Etag:
-      - '"5175bdd2ed8eb3d1a08a1d5e00680ff2"'
+      - '"5fc868dd75f0f49d57a0a1ffe268a288"'
       Server:
       - RubyGems.org
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"name":"webmock","downloads":133568310,"version":"3.14.0","version_created_at":"2021-08-05T09:47:44.815Z","version_downloads":3068548,"platform":"ruby","authors":"Bartosz
+      string: '{"name":"webmock","downloads":133659231,"version":"3.14.0","version_created_at":"2021-08-05T09:47:44.815Z","version_downloads":3100760,"platform":"ruby","authors":"Bartosz
         Blimke","info":"WebMock allows stubbing HTTP requests and setting expectations
         on HTTP requests.","licenses":["MIT"],"metadata":{"wiki_uri":"https://github.com/bblimke/webmock/wiki","changelog_uri":"https://github.com/bblimke/webmock/blob/v3.14.0/CHANGELOG.md","bug_tracker_uri":"https://github.com/bblimke/webmock/issues","source_code_uri":"https://github.com/bblimke/webmock/tree/v3.14.0","documentation_uri":"https://www.rubydoc.info/gems/webmock/3.14.0"},"yanked":false,"sha":"b317a4f6fa7ebcc1e6e2cba29f01fccc12a5e9aa4365b037c34ca4072e821bd1","project_uri":"https://rubygems.org/gems/webmock","gem_uri":"https://rubygems.org/gems/webmock-3.14.0.gem","homepage_uri":"http://github.com/bblimke/webmock","wiki_uri":"https://github.com/bblimke/webmock/wiki","documentation_uri":"https://www.rubydoc.info/gems/webmock/3.14.0","mailing_list_uri":null,"source_code_uri":"https://github.com/bblimke/webmock/tree/v3.14.0","bug_tracker_uri":"https://github.com/bblimke/webmock/issues","changelog_uri":"https://github.com/bblimke/webmock/blob/v3.14.0/CHANGELOG.md","funding_uri":null,"dependencies":{"development":[{"name":"async-http","requirements":"\u003e=
         0.48.0"},{"name":"curb","requirements":"\u003e= 0.7.16"},{"name":"em-http-request","requirements":"\u003e=
@@ -1479,7 +1479,7 @@ http_interactions:
         3.0.0"},{"name":"typhoeus","requirements":"\u003e= 0.5.0"},{"name":"webrick","requirements":"\u003e=
         0"}],"runtime":[{"name":"addressable","requirements":"\u003e= 2.8.0"},{"name":"crack","requirements":"\u003e=
         0.3.2"},{"name":"hashdiff","requirements":"\u003e= 0.4.0, \u003c 2.0.0"}]}}'
-  recorded_at: Mon, 29 Nov 2021 11:52:41 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:18 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/bblimke/webmock
@@ -1492,7 +1492,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Mon, 29 Nov 2021 11:52:41 GMT
+      - Mon, 29 Nov 2021 23:49:18 GMT
   response:
     status:
       code: 200
@@ -1501,7 +1501,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 29 Nov 2021 11:52:41 GMT
+      - Mon, 29 Nov 2021 23:49:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -1536,23 +1536,23 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '20'
+      - '38'
       X-Ratelimit-Reset:
-      - '1638188887'
+      - '1638233042'
       X-Ratelimit-Resource:
       - core
       X-Ratelimit-Used:
-      - '40'
+      - '22'
       Accept-Ranges:
       - bytes
       Content-Length:
       - '4933'
       X-Github-Request-Id:
-      - CD20:5BE0:326508:38CE11:61A4BF09
+      - C0C8:4FC5:3F0CBA:47C5D7:61A566FE
     body:
       encoding: UTF-8
       string: '{"id":363163,"node_id":"MDEwOlJlcG9zaXRvcnkzNjMxNjM=","name":"webmock","full_name":"bblimke/webmock","private":false,"owner":{"login":"bblimke","id":15547,"node_id":"MDQ6VXNlcjE1NTQ3","avatar_url":"https://avatars.githubusercontent.com/u/15547?v=4","gravatar_id":"","url":"https://api.github.com/users/bblimke","html_url":"https://github.com/bblimke","followers_url":"https://api.github.com/users/bblimke/followers","following_url":"https://api.github.com/users/bblimke/following{/other_user}","gists_url":"https://api.github.com/users/bblimke/gists{/gist_id}","starred_url":"https://api.github.com/users/bblimke/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bblimke/subscriptions","organizations_url":"https://api.github.com/users/bblimke/orgs","repos_url":"https://api.github.com/users/bblimke/repos","events_url":"https://api.github.com/users/bblimke/events{/privacy}","received_events_url":"https://api.github.com/users/bblimke/received_events","type":"User","site_admin":false},"html_url":"https://github.com/bblimke/webmock","description":"Library
         for stubbing and setting expectations on HTTP requests in Ruby.","fork":false,"url":"https://api.github.com/repos/bblimke/webmock","forks_url":"https://api.github.com/repos/bblimke/webmock/forks","keys_url":"https://api.github.com/repos/bblimke/webmock/keys{/key_id}","collaborators_url":"https://api.github.com/repos/bblimke/webmock/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/bblimke/webmock/teams","hooks_url":"https://api.github.com/repos/bblimke/webmock/hooks","issue_events_url":"https://api.github.com/repos/bblimke/webmock/issues/events{/number}","events_url":"https://api.github.com/repos/bblimke/webmock/events","assignees_url":"https://api.github.com/repos/bblimke/webmock/assignees{/user}","branches_url":"https://api.github.com/repos/bblimke/webmock/branches{/branch}","tags_url":"https://api.github.com/repos/bblimke/webmock/tags","blobs_url":"https://api.github.com/repos/bblimke/webmock/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/bblimke/webmock/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/bblimke/webmock/git/refs{/sha}","trees_url":"https://api.github.com/repos/bblimke/webmock/git/trees{/sha}","statuses_url":"https://api.github.com/repos/bblimke/webmock/statuses/{sha}","languages_url":"https://api.github.com/repos/bblimke/webmock/languages","stargazers_url":"https://api.github.com/repos/bblimke/webmock/stargazers","contributors_url":"https://api.github.com/repos/bblimke/webmock/contributors","subscribers_url":"https://api.github.com/repos/bblimke/webmock/subscribers","subscription_url":"https://api.github.com/repos/bblimke/webmock/subscription","commits_url":"https://api.github.com/repos/bblimke/webmock/commits{/sha}","git_commits_url":"https://api.github.com/repos/bblimke/webmock/git/commits{/sha}","comments_url":"https://api.github.com/repos/bblimke/webmock/comments{/number}","issue_comment_url":"https://api.github.com/repos/bblimke/webmock/issues/comments{/number}","contents_url":"https://api.github.com/repos/bblimke/webmock/contents/{+path}","compare_url":"https://api.github.com/repos/bblimke/webmock/compare/{base}...{head}","merges_url":"https://api.github.com/repos/bblimke/webmock/merges","archive_url":"https://api.github.com/repos/bblimke/webmock/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/bblimke/webmock/downloads","issues_url":"https://api.github.com/repos/bblimke/webmock/issues{/number}","pulls_url":"https://api.github.com/repos/bblimke/webmock/pulls{/number}","milestones_url":"https://api.github.com/repos/bblimke/webmock/milestones{/number}","notifications_url":"https://api.github.com/repos/bblimke/webmock/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/bblimke/webmock/labels{/name}","releases_url":"https://api.github.com/repos/bblimke/webmock/releases{/id}","deployments_url":"https://api.github.com/repos/bblimke/webmock/deployments","created_at":"2009-11-06T10:37:29Z","updated_at":"2021-11-28T12:27:03Z","pushed_at":"2021-10-15T18:40:44Z","git_url":"git://github.com/bblimke/webmock.git","ssh_url":"git@github.com:bblimke/webmock.git","clone_url":"https://github.com/bblimke/webmock.git","svn_url":"https://github.com/bblimke/webmock","homepage":"","size":2536,"stargazers_count":3596,"watchers_count":3596,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":513,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":152,"license":{"key":"mit","name":"MIT
         License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":513,"open_issues":152,"watchers":3596,"default_branch":"master","temp_clone_token":null,"network_count":513,"subscribers_count":43}'
-  recorded_at: Mon, 29 Nov 2021 11:52:42 GMT
+  recorded_at: Mon, 29 Nov 2021 23:49:19 GMT
 recorded_with: VCR 6.0.0

@@ -7,6 +7,7 @@ module Gemat
       @columns = columns
       @write_path = write_path
       @rows = []
+      set_column_name_length
       gen_rows
     end
 
@@ -28,6 +29,19 @@ module Gemat
       rows.each do |row|
         proc.call(row)
         proc.call("\n")
+      end
+    end
+
+    def set_column_name_length
+      rows = []
+      rows << @columns.map(&:column_name)
+      @gems.each do |gem|
+        rows << @columns.map { |dsl| dsl.call(gem)  }
+      end
+      rows.transpose
+      maxes = rows.max { |a, b| a.to_s.length <=> b.to_s.length }.map { |s| s.to_s.length }
+      maxes.zip(@columns) do |max, column|
+        column.max_length = max
       end
     end
   end

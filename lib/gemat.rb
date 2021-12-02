@@ -13,6 +13,7 @@ require_relative 'gem'
 require_relative 'formatter'
 require_relative 'csv_formatter'
 require_relative 'md_formatter'
+require_relative 'org_formatter'
 require_relative 'gemat/version'
 require_relative 'gemat/cli'
 

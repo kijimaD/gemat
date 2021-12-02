@@ -14,6 +14,11 @@ module Gemat
       command(options, __method__)
     end
 
+    desc 'org', 'export Gemfile to org'
+    def org
+      command(options, __method__)
+    end
+
     no_tasks do
       def command(options, method_name)
         klass = "Gemat::#{method_name.capitalize}Formatter"
